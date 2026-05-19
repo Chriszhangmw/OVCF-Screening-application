@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OVCF Clinical Intelligence Assessment System</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">Orthopedic Imaging and Rehabilitation Assessment Center</div>
+          <h1>OVCF Multimodal Intelligent Screening System</h1>
+        </div>
+        <div class="system-status">
+          <span class="status-dot"></span>
+          <span>Research Demo System</span>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="sidebar">
+          <section class="panel">
+            <div class="section-title">
+              <span>Patient Information</span>
+              <small>Basic profile</small>
+            </div>
+            <form id="patient-form" class="form-grid">
+              <label>
+                Case ID
+                <input name="case_id" value="OVCF-DEMO-001" autocomplete="off" />
+              </label>
+              <label>
+                Name
+                <input name="name" placeholder="Optional" autocomplete="off" />
+              </label>
+              <label>
+                Age
+                <input name="age" type="number" min="1" max="110" value="60" />
+              </label>
+              <label>
+                Sex
+                <select name="sex">
+                  <option value="F">Female</option>
+                  <option value="M">Male</option>
+                </select>
+              </label>
+              <label>
+                Height (cm)
+                <input name="height_cm" type="number" min="80" max="230" value="158" />
+              </label>
+              <label>
+                Weight (kg)
+                <input name="weight_kg" type="number" min="20" max="180" value="80" />
+              </label>
+              <label>
+                Smoking History
+                <select name="smoking_history">
+                  <option value="&#26080;">No</option>
+                  <option value="&#26377;">Yes</option>
+                </select>
+              </label>
+              <label>
+                Drinking History
+                <select name="drinking_history">
+                  <option value="&#26080;">No</option>
+                  <option value="&#26377;">Yes</option>
+                </select>
+              </label>
+              <label class="span-2">
+                Trauma History
+                <select name="injury_history">
+                  <option value="&#39640;&#33021;&#37327;&#22806;&#20260;">High-energy trauma</option>
+                  <option value="&#20302;&#33021;&#37327;&#22806;&#20260;">Low-energy trauma</option>
+                  <option value="&#26080;">None</option>
+                </select>
+              </label>
+            </form>
+          </section>
+
+          <section class="panel">
+            <div class="section-title">
+              <span>Analysis Control</span>
+              <small>Live prediction</small>
+            </div>
+            <label class="switch-row">
+              <input id="live-mode" type="checkbox" checked />
+              <span>Enable live image/video analysis</span>
+            </label>
+            <input id="fallback-mode" type="checkbox" hidden />
+            <button id="analyze-btn" class="primary-action" type="button">Start Analysis</button>
+            <button id="reset-btn" class="secondary-action" type="button">Clear and Start Next Patient</button>
+            <div id="run-state" class="run-state">Ready</div>
+          </section>
+        </aside>
+
+        <section class="main-area">
+          <section class="panel upload-panel">
+            <div class="section-title">
+              <span>Image and Video Collection</span>
+              <small>Upload all required media</small>
+            </div>
+            <div class="upload-choices">
+              <label id="image-drop-zone" class="drop-zone">
+                <input id="image-input" type="file" multiple accept="image/*" />
+                <span class="drop-title">Upload Images</span>
+                <span class="drop-subtitle">Only image files are shown in the file picker.</span>
+              </label>
+              <label id="video-drop-zone" class="drop-zone">
+                <input id="video-input" type="file" multiple accept="video/*" />
+                <span class="drop-title">Upload Videos</span>
+                <span class="drop-subtitle">Only video files are shown in the file picker.</span>
+              </label>
+            </div>
+            <p class="upload-help">
+              File names are used to identify frontal, back, lateral, left roll, right roll, supine-to-sit, and sit-to-supine modalities.
+            </p>
+            <div id="media-list" class="media-list"></div>
+          </section>
+
+          <section id="results" class="results hidden">
+            <section class="risk-layout">
+              <div class="risk-panel">
+                <div class="risk-copy">
+                  <div class="eyebrow">Model Output</div>
+                  <h2 id="prediction-label">Waiting for Analysis</h2>
+                  <p id="model-note">Research model output; not a substitute for clinical diagnosis.</p>
+                </div>
+                <div id="risk-gauge" class="risk-gauge" style="--risk: 0%">
+                  <div>
+                    <strong id="probability-label">0%</strong>
+                    <span>OVCF Risk Probability</span>
+                  </div>
+                </div>
+              </div>
+              <div class="metrics-panel" id="metrics-panel"></div>
+            </section>
+
+            <section class="panel">
+              <div class="section-title">
+                <span>Structured Clinical Evidence</span>
+                <small id="evidence-completeness">Uploaded 0 modalities</small>
+              </div>
+              <div id="assessment-grid" class="assessment-grid"></div>
+            </section>
+
+            <section class="panel">
+              <div class="section-title">
+                <span>Model Explainability</span>
+                <small>Primary risk signals</small>
+              </div>
+              <div id="feature-bars" class="feature-bars"></div>
+            </section>
+
+            <section class="panel">
+              <div class="section-title">
+                <span>Run Logs</span>
+                <small>Uploads, modality recognition, API calls, and model input</small>
+              </div>
+              <div id="log-list" class="log-list"></div>
+            </section>
+          </section>
+        </section>
+      </main>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

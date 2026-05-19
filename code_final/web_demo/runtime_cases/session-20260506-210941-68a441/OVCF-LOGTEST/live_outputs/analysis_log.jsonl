@@ -1,0 +1,7 @@
+{"time": "2026-05-06 21:33:08", "event": "runtime_payload_loaded", "case_id": "OVCF-LOGTEST", "media_roles": [], "media_paths": {}}
+{"time": "2026-05-06 21:33:08", "event": "api_key_ready", "source": "environment_or_embedded", "key_present": true}
+{"time": "2026-05-06 21:33:08", "event": "prompts_loaded", "prompt_count": 6, "prompt_keys": ["image_back.txt", "image_frontal.txt", "image_lateral.txt", "video_roll.txt", "video_sit_to_supine.txt", "video_supine_to_sit.txt"]}
+{"time": "2026-05-06 21:33:08", "event": "structured_flattened", "present_score_count": 0, "present_score_cols": [], "explanation_rows": 0}
+{"time": "2026-05-06 21:33:09", "event": "model_bundle_loaded", "feature_count": 39, "threshold": 0.4514063610952404}
+{"time": "2026-05-06 21:33:09", "event": "missing_modalities_computed", "missing_modalities": ["frontal", "lateral", "back", "roll_left", "roll_right", "sit_to_supine", "supine_to_sit"]}
+{"time": "2026-05-06 21:33:09", "event": "prediction_done", "probability": 0.7353492063492065, "threshold": 0.4514063610952404, "prediction": "OVCF", "top_feature_count": 7}

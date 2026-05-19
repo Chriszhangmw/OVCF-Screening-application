@@ -1,0 +1,11 @@
+﻿feature,feature_type,display,raw_value,numeric_value_after_encoding,model_importance,positive_mean,control_mean,risk_signal,llm_score,llm_value,llm_explanation,abs_signal
+injury_history,clinical,injury_history,高能量外伤,2.0,0.11081317805524153,0.6504854368932039,0.20388349514563106,0.22162635611048306,,高能量外伤,Clinical metadata feature; no LLM explanation.,0.22162635611048306
+video_supine_to_sit__TrunkControl__score,LLM_score,video_supine_to_sit / TrunkControl,0.52,0.52,0.049858789684903294,0.6102083333333332,0.3974747474747474,0.02742233432669682,0.52,,躯干屈曲过程中出现中度控制不稳，前移时可见轻微前冲趋势，坐稳后有轻微晃动,0.02742233432669682
+video_supine_to_sit__PainResponseLevel__score,LLM_score,video_supine_to_sit / PainResponseLevel,0.55,0.55,0.0636476896534381,0.47437499999999994,0.29121212121212126,0.02121589655114604,0.55,,面部表情略显紧张，动作谨慎且伴有屏气现象，提示中度疼痛回避行为,0.02121589655114604
+video_supine_to_sit__ExecutionTime__score,LLM_score,video_supine_to_sit / ExecutionTime,0.48,0.48,0.0743456836012005,0.5815625000000001,0.41606060606060613,0.008260631511244492,0.48,,总耗时约3.8秒，动作节奏较慢，存在轻中度迟疑,0.008260631511244492
+video_supine_to_sit__MotionCoordination__score,LLM_score,video_supine_to_sit / MotionCoordination,0.34,0.34,0.03171390311581221,0.5416666666666667,0.35656565656565653,0.007135628201057749,0.34,,动作整体连贯，但存在轻度节奏变化，从抬头到坐起过程中有短暂停顿（约0.4秒）,0.007135628201057749
+sex,clinical,sex,F,0.0,0.007892741826987414,0.19607843137254902,0.38235294117647056,-0.0,,F,Clinical metadata feature; no LLM explanation.,0.0
+smoking_history,clinical,smoking_history,无,0.0,0.009619404817803044,0.10679611650485436,0.24271844660194175,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+drinking_history,clinical,drinking_history,无,0.0,0.004155516894618274,0.13592233009708737,0.23300970873786409,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+video_roll_left__SupportHandUsage__score,LLM_score,video_roll_left / SupportHandUsage,单手辅助,1.0,0.009944581545522987,1.04,1.0,0.0,0.36,单手辅助,右手轻触床面并施加小力推动身体完成翻身，发力持续时间短且强度较低,0.0
+video_roll_right__SupportHandUsage__score,LLM_score,video_roll_right / SupportHandUsage,单手辅助,1.0,0.011972557869820382,0.979381443298969,0.9090909090909091,0.0,0.27,单手辅助,右手轻触床面辅助启动，发力较小且未持续，属于轻度辅助,0.0

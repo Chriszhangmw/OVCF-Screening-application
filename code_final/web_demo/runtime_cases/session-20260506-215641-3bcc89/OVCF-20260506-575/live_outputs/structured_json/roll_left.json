@@ -1,0 +1,19 @@
+{
+  "RollingSmoothness": {
+    "score": 0.32,
+    "explanation": "翻身过程整体连贯，但存在轻度减速和短暂停顿（约0.4秒），动作节奏略有中断"
+  },
+  "HipShoulderCoordination": {
+    "score": 0.45,
+    "explanation": "肩部先于髋部启动旋转，相位差约18°，存在轻中度分离运动，躯干旋转不完全同步"
+  },
+  "PainDuringMovement": {
+    "score": 0.28,
+    "explanation": "启动时略显迟疑，面部表情轻微紧张，无明显保护性收缩或突然停止"
+  },
+  "SupportHandUsage": {
+    "score": 0.36,
+    "value": "单手辅助",
+    "explanation": "右手轻触床面并施加小力推动身体完成翻身，发力持续时间短且强度较低"
+  }
+}

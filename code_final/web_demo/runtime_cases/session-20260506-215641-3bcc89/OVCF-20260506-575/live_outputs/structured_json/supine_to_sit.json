@@ -1,0 +1,23 @@
+{
+  "MotionCoordination": {
+    "score": 0.34,
+    "explanation": "动作整体连贯，但存在轻度节奏变化，从抬头到坐起过程中有短暂停顿（约0.4秒）"
+  },
+  "TrunkControl": {
+    "score": 0.52,
+    "explanation": "躯干屈曲过程中出现中度控制不稳，前移时可见轻微前冲趋势，坐稳后有轻微晃动"
+  },
+  "ArmAssistance": {
+    "score": 0.67,
+    "value": "明显依赖支撑",
+    "explanation": "双上肢全程参与发力，尤其在起身初期用双手推床面以辅助完成动作"
+  },
+  "ExecutionTime": {
+    "score": 0.48,
+    "explanation": "总耗时约3.8秒，动作节奏较慢，存在轻中度迟疑"
+  },
+  "PainResponseLevel": {
+    "score": 0.55,
+    "explanation": "面部表情略显紧张，动作谨慎且伴有屏气现象，提示中度疼痛回避行为"
+  }
+}

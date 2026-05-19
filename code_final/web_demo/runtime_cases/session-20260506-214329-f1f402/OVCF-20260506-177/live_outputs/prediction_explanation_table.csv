@@ -1,0 +1,11 @@
+﻿feature,feature_type,display,raw_value,numeric_value_after_encoding,model_importance,positive_mean,control_mean,risk_signal,llm_score,llm_value,llm_explanation,abs_signal
+injury_history,clinical,injury_history,高能量外伤,2.0,0.11081317805524153,0.6504854368932039,0.20388349514563106,0.22162635611048306,,高能量外伤,Clinical metadata feature; no LLM explanation.,0.22162635611048306
+video_supine_to_sit__PainResponseLevel__score,LLM_score,video_supine_to_sit / PainResponseLevel,0.57,0.57,0.0636476896534381,0.47437499999999994,0.29121212121212126,0.024044682757965497,0.57,,面部表情略显紧张，屏气明显，动作谨慎，存在保护性缓慢起身行为,0.024044682757965497
+video_supine_to_sit__TrunkControl__score,LLM_score,video_supine_to_sit / TrunkControl,0.48,0.48,0.049858789684903294,0.6102083333333332,0.3974747474747474,0.022436455358206483,0.48,,躯干屈曲过程中出现轻中度控制不足，可见轻微前冲趋势，坐稳后有轻微晃动,0.022436455358206483
+video_supine_to_sit__ExecutionTime__score,LLM_score,video_supine_to_sit / ExecutionTime,0.51,0.51,0.0743456836012005,0.5815625000000001,0.41606060606060613,0.016521263022488998,0.51,,完成时间约为3.8秒，属于中度迟疑范围，动作节奏缓慢且有停顿,0.016521263022488998
+video_roll_right__SupportHandUsage__score,LLM_score,video_roll_right / SupportHandUsage,双手发力辅助,2.0,0.011972557869820382,0.979381443298969,0.9090909090909091,0.011972557869820382,0.79,双手发力辅助,双手持续推床面协助翻身，尤其在动作中期发力明显，反映躯干控制力不足及代偿机制激活,0.011972557869820382
+video_supine_to_sit__MotionCoordination__score,LLM_score,video_supine_to_sit / MotionCoordination,0.35,0.35,0.03171390311581221,0.5416666666666667,0.35656565656565653,0.00792847577895305,0.35,,动作整体连贯，但存在轻度停顿（约0.4秒）于躯干抬起中期，节奏略显不均,0.00792847577895305
+sex,clinical,sex,F,0.0,0.007892741826987414,0.19607843137254902,0.38235294117647056,-0.0,,F,Clinical metadata feature; no LLM explanation.,0.0
+smoking_history,clinical,smoking_history,无,0.0,0.009619404817803044,0.10679611650485436,0.24271844660194175,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+drinking_history,clinical,drinking_history,无,0.0,0.004155516894618274,0.13592233009708737,0.23300970873786409,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+image_lateral__SagittalBalance__score,LLM_score,image_lateral / SagittalBalance,0.85,0.85,0.027363261548423463,0.8588372093023255,0.8199999999999997,0.0,0.85,,C7铅垂线前移约7.5cm，远超S1后上缘，矢状位平衡严重失衡，提示整体脊柱矢状序列紊乱,0.0

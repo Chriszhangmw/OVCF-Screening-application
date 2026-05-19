@@ -1,0 +1,11 @@
+﻿feature,feature_type,display,raw_value,numeric_value_after_encoding,model_importance,positive_mean,control_mean,risk_signal,llm_score,llm_value,llm_explanation,abs_signal
+injury_history,clinical,injury_history,高能量外伤,2.0,0.11081317805524153,0.6504854368932039,0.20388349514563106,0.22162635611048306,,高能量外伤,Clinical metadata feature; no LLM explanation.,0.22162635611048306
+sex,clinical,sex,F,0.0,0.007892741826987414,0.19607843137254902,0.38235294117647056,-0.0,,F,Clinical metadata feature; no LLM explanation.,0.0
+smoking_history,clinical,smoking_history,无,0.0,0.009619404817803044,0.10679611650485436,0.24271844660194175,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+drinking_history,clinical,drinking_history,无,0.0,0.004155516894618274,0.13592233009708737,0.23300970873786409,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+image_frontal__SpinalAlignment__score,LLM_score,image_frontal / SpinalAlignment,0.52,0.52,9.088296273621413e-05,0.8410714285714282,0.8196969696969691,-2.999137770295066e-05,0.52,,C7-S1连线向右侧偏移约2.3cm，躯干轴线明显偏离中线,2.999137770295066e-05
+image_frontal__ShoulderSymmetry__score,LLM_score,image_frontal / ShoulderSymmetry,0.61,0.61,0.00869456198317547,0.8160714285714287,0.8050505050505053,-0.012607114875604428,0.61,,右肩较左侧高约2.1cm，伴轻度胸廓旋转代偿,0.012607114875604428
+height_cm,clinical,height_cm,158,158.0,0.04212110040661493,153.76530612244898,157.38,-0.01263633012198448,,158,Clinical metadata feature; no LLM explanation.,0.01263633012198448
+image_frontal__PelvicLeveling__score,LLM_score,image_frontal / PelvicLeveling,0.48,0.48,0.010731259458858838,0.7142857142857143,0.7040404040404042,-0.02897440053891887,0.48,,右侧髂嵴低约1.8cm，骨盆存在中度侧倾,0.02897440053891887
+image_frontal__CoronalCurvature__score,LLM_score,image_frontal / CoronalCurvature,0.58,0.58,0.01601305830833617,0.8351190476190476,0.8267676767676768,-0.035228728278339595,0.58,,脊柱关键点形成S形趋势，最大横向偏移约2.6cm，提示冠状面失衡,0.035228728278339595
+age,clinical,age,60,60.0,0.08679586707521984,71.32,65.03960396039604,-0.061997047910871315,,60,Clinical metadata feature; no LLM explanation.,0.061997047910871315

@@ -1,0 +1,8 @@
+﻿feature,feature_type,display,raw_value,numeric_value_after_encoding,model_importance,positive_mean,control_mean,risk_signal,llm_score,llm_value,llm_explanation,abs_signal
+injury_history,clinical,injury_history,高能量外伤,2.0,0.11081317805524153,0.6504854368932039,0.20388349514563106,0.22162635611048306,,高能量外伤,Clinical metadata feature; no LLM explanation.,0.22162635611048306
+sex,clinical,sex,F,0.0,0.007892741826987414,0.19607843137254902,0.38235294117647056,-0.0,,F,Clinical metadata feature; no LLM explanation.,0.0
+smoking_history,clinical,smoking_history,无,0.0,0.009619404817803044,0.10679611650485436,0.24271844660194175,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+drinking_history,clinical,drinking_history,无,0.0,0.004155516894618274,0.13592233009708737,0.23300970873786409,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+height_cm,clinical,height_cm,158,158.0,0.04212110040661493,153.76530612244898,157.38,-0.01263633012198448,,158,Clinical metadata feature; no LLM explanation.,0.01263633012198448
+age,clinical,age,60,60.0,0.08679586707521984,71.32,65.03960396039604,-0.061997047910871315,,60,Clinical metadata feature; no LLM explanation.,0.061997047910871315
+weight_kg,clinical,weight_kg,80,80.0,0.0847113863891966,54.994897959183675,61.185,-0.139168706210823,,80,Clinical metadata feature; no LLM explanation.,0.139168706210823

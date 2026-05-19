@@ -1,0 +1,625 @@
+{
+  "ok": true,
+  "case_id": "OVCF-DEMO-001",
+  "analysis_mode": "live_model",
+  "report": {
+    "patient": "OVCF-DEMO-001",
+    "clinical_meta_used": {
+      "age": "60",
+      "sex": "F",
+      "height_cm": "158",
+      "weight_kg": "80",
+      "smoking_history": "无",
+      "drinking_history": "无",
+      "injury_history": "高能量外伤"
+    },
+    "clinical_meta_source": "web_form",
+    "ovcf_probability": 0.7353492063492065,
+    "threshold": 0.4514063610952404,
+    "prediction": "OVCF",
+    "missing_modalities": [
+      "frontal",
+      "lateral",
+      "back",
+      "roll_left",
+      "roll_right",
+      "sit_to_supine",
+      "supine_to_sit"
+    ],
+    "model_training_summary": {
+      "n_samples": 206,
+      "n_positive": 103,
+      "n_control": 103,
+      "cv_metrics_at_0_50": {
+        "threshold": 0.5,
+        "auc": 0.8259025355829956,
+        "accuracy": 0.7475728155339806,
+        "f1": 0.75,
+        "sensitivity": 0.7572815533980582,
+        "specificity": 0.7378640776699029,
+        "tp": 78,
+        "fp": 27,
+        "tn": 76,
+        "fn": 25
+      },
+      "cv_metrics_at_youden": {
+        "threshold": 0.4514063610952404,
+        "auc": 0.8259025355829956,
+        "accuracy": 0.7766990291262136,
+        "f1": 0.7927927927927928,
+        "sensitivity": 0.8543689320388349,
+        "specificity": 0.6990291262135923,
+        "tp": 88,
+        "fp": 31,
+        "tn": 72,
+        "fn": 15
+      },
+      "holdout_metrics_at_youden": {
+        "threshold": 0.4514063610952404,
+        "auc": 0.7959183673469388,
+        "accuracy": 0.7142857142857143,
+        "f1": 0.7692307692307693,
+        "sensitivity": 0.9523809523809523,
+        "specificity": 0.47619047619047616,
+        "tp": 20,
+        "fp": 11,
+        "tn": 10,
+        "fn": 1
+      }
+    },
+    "top_explanatory_features": [
+      {
+        "feature": "injury_history",
+        "feature_type": "clinical",
+        "display": "injury_history",
+        "raw_value": "高能量外伤",
+        "numeric_value_after_encoding": 2.0,
+        "model_importance": 0.11081317805524153,
+        "positive_mean": 0.6504854368932039,
+        "control_mean": 0.20388349514563106,
+        "risk_signal": 0.22162635611048306,
+        "llm_score": NaN,
+        "llm_value": "高能量外伤",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.22162635611048306
+      },
+      {
+        "feature": "sex",
+        "feature_type": "clinical",
+        "display": "sex",
+        "raw_value": "F",
+        "numeric_value_after_encoding": 0.0,
+        "model_importance": 0.007892741826987414,
+        "positive_mean": 0.19607843137254902,
+        "control_mean": 0.38235294117647056,
+        "risk_signal": -0.0,
+        "llm_score": NaN,
+        "llm_value": "F",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.0
+      },
+      {
+        "feature": "smoking_history",
+        "feature_type": "clinical",
+        "display": "smoking_history",
+        "raw_value": "无",
+        "numeric_value_after_encoding": 0.0,
+        "model_importance": 0.009619404817803044,
+        "positive_mean": 0.10679611650485436,
+        "control_mean": 0.24271844660194175,
+        "risk_signal": -0.0,
+        "llm_score": NaN,
+        "llm_value": "无",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.0
+      },
+      {
+        "feature": "drinking_history",
+        "feature_type": "clinical",
+        "display": "drinking_history",
+        "raw_value": "无",
+        "numeric_value_after_encoding": 0.0,
+        "model_importance": 0.004155516894618274,
+        "positive_mean": 0.13592233009708737,
+        "control_mean": 0.23300970873786409,
+        "risk_signal": -0.0,
+        "llm_score": NaN,
+        "llm_value": "无",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.0
+      },
+      {
+        "feature": "height_cm",
+        "feature_type": "clinical",
+        "display": "height_cm",
+        "raw_value": "158",
+        "numeric_value_after_encoding": 158.0,
+        "model_importance": 0.04212110040661493,
+        "positive_mean": 153.76530612244898,
+        "control_mean": 157.38,
+        "risk_signal": -0.01263633012198448,
+        "llm_score": NaN,
+        "llm_value": "158",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.01263633012198448
+      },
+      {
+        "feature": "age",
+        "feature_type": "clinical",
+        "display": "age",
+        "raw_value": "60",
+        "numeric_value_after_encoding": 60.0,
+        "model_importance": 0.08679586707521984,
+        "positive_mean": 71.32,
+        "control_mean": 65.03960396039604,
+        "risk_signal": -0.061997047910871315,
+        "llm_score": NaN,
+        "llm_value": "60",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.061997047910871315
+      },
+      {
+        "feature": "weight_kg",
+        "feature_type": "clinical",
+        "display": "weight_kg",
+        "raw_value": "80",
+        "numeric_value_after_encoding": 80.0,
+        "model_importance": 0.0847113863891966,
+        "positive_mean": 54.994897959183675,
+        "control_mean": 61.185,
+        "risk_signal": -0.139168706210823,
+        "llm_score": NaN,
+        "llm_value": "80",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.139168706210823
+      }
+    ],
+    "note": "Research model output; not a substitute for clinical diagnosis."
+  },
+  "explanation_table": [
+    {
+      "feature": "injury_history",
+      "feature_type": "clinical",
+      "display": "injury_history",
+      "raw_value": "高能量外伤",
+      "numeric_value_after_encoding": 2.0,
+      "model_importance": 0.11081317805524153,
+      "positive_mean": 0.6504854368932039,
+      "control_mean": 0.20388349514563106,
+      "risk_signal": 0.22162635611048306,
+      "llm_score": NaN,
+      "llm_value": "高能量外伤",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.22162635611048306
+    },
+    {
+      "feature": "sex",
+      "feature_type": "clinical",
+      "display": "sex",
+      "raw_value": "F",
+      "numeric_value_after_encoding": 0.0,
+      "model_importance": 0.007892741826987414,
+      "positive_mean": 0.19607843137254902,
+      "control_mean": 0.38235294117647056,
+      "risk_signal": -0.0,
+      "llm_score": NaN,
+      "llm_value": "F",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.0
+    },
+    {
+      "feature": "smoking_history",
+      "feature_type": "clinical",
+      "display": "smoking_history",
+      "raw_value": "无",
+      "numeric_value_after_encoding": 0.0,
+      "model_importance": 0.009619404817803044,
+      "positive_mean": 0.10679611650485436,
+      "control_mean": 0.24271844660194175,
+      "risk_signal": -0.0,
+      "llm_score": NaN,
+      "llm_value": "无",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.0
+    },
+    {
+      "feature": "drinking_history",
+      "feature_type": "clinical",
+      "display": "drinking_history",
+      "raw_value": "无",
+      "numeric_value_after_encoding": 0.0,
+      "model_importance": 0.004155516894618274,
+      "positive_mean": 0.13592233009708737,
+      "control_mean": 0.23300970873786409,
+      "risk_signal": -0.0,
+      "llm_score": NaN,
+      "llm_value": "无",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.0
+    },
+    {
+      "feature": "height_cm",
+      "feature_type": "clinical",
+      "display": "height_cm",
+      "raw_value": "158",
+      "numeric_value_after_encoding": 158.0,
+      "model_importance": 0.04212110040661493,
+      "positive_mean": 153.76530612244898,
+      "control_mean": 157.38,
+      "risk_signal": -0.01263633012198448,
+      "llm_score": NaN,
+      "llm_value": "158",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.01263633012198448
+    },
+    {
+      "feature": "age",
+      "feature_type": "clinical",
+      "display": "age",
+      "raw_value": "60",
+      "numeric_value_after_encoding": 60.0,
+      "model_importance": 0.08679586707521984,
+      "positive_mean": 71.32,
+      "control_mean": 65.03960396039604,
+      "risk_signal": -0.061997047910871315,
+      "llm_score": NaN,
+      "llm_value": "60",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.061997047910871315
+    },
+    {
+      "feature": "weight_kg",
+      "feature_type": "clinical",
+      "display": "weight_kg",
+      "raw_value": "80",
+      "numeric_value_after_encoding": 80.0,
+      "model_importance": 0.0847113863891966,
+      "positive_mean": 54.994897959183675,
+      "control_mean": 61.185,
+      "risk_signal": -0.139168706210823,
+      "llm_score": NaN,
+      "llm_value": "80",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.139168706210823
+    }
+  ],
+  "llm_explanations": [],
+  "structured": {
+    "roll_left": {
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CAFAF920>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    "lateral": {
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB628BF0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    "roll_right": {
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB5FF6E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    "supine_to_sit": {
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB62A5A0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    "frontal": {
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB62A720>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    "back": {
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB5FFBC0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    }
+  },
+  "media": [
+    {
+      "role": "roll_left",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\01_毕明友_仰卧.mp4",
+      "name": "01_毕明友_仰卧.mp4"
+    },
+    {
+      "role": "lateral",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\02_毕明友_侧位.jpg",
+      "name": "02_毕明友_侧位.jpg"
+    },
+    {
+      "role": "roll_right",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\03_毕明友_右翻.mp4",
+      "name": "03_毕明友_右翻.mp4"
+    },
+    {
+      "role": "supine_to_sit",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\04_毕明友_坐起来.mp4",
+      "name": "04_毕明友_坐起来.mp4"
+    },
+    {
+      "role": "frontal",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\06_毕明友_正位.jpg",
+      "name": "06_毕明友_正位.jpg"
+    },
+    {
+      "role": "back",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\07_毕明友_背位.jpg",
+      "name": "07_毕明友_背位.jpg"
+    }
+  ],
+  "logs": [
+    {
+      "time": "2026-05-06 21:36:23",
+      "event": "runtime_payload_loaded",
+      "case_id": "OVCF-DEMO-001",
+      "media_roles": [
+        "roll_left",
+        "lateral",
+        "roll_right",
+        "supine_to_sit",
+        "frontal",
+        "back"
+      ],
+      "media_paths": {
+        "roll_left": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\01_毕明友_仰卧.mp4",
+        "lateral": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\02_毕明友_侧位.jpg",
+        "roll_right": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\03_毕明友_右翻.mp4",
+        "supine_to_sit": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\04_毕明友_坐起来.mp4",
+        "frontal": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\06_毕明友_正位.jpg",
+        "back": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\07_毕明友_背位.jpg"
+      }
+    },
+    {
+      "time": "2026-05-06 21:36:23",
+      "event": "api_key_ready",
+      "source": "environment_or_embedded",
+      "key_present": true
+    },
+    {
+      "time": "2026-05-06 21:36:23",
+      "event": "prompts_loaded",
+      "prompt_count": 6,
+      "prompt_keys": [
+        "image_back.txt",
+        "image_frontal.txt",
+        "image_lateral.txt",
+        "video_roll.txt",
+        "video_sit_to_supine.txt",
+        "video_supine_to_sit.txt"
+      ]
+    },
+    {
+      "time": "2026-05-06 21:36:23",
+      "event": "dashscope_action_start",
+      "action": "roll_left",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\01_毕明友_仰卧.mp4",
+      "exists": true,
+      "size": 519942
+    },
+    {
+      "time": "2026-05-06 21:36:25",
+      "event": "dashscope_action_error",
+      "action": "roll_left",
+      "attempt": 1,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB45D6A0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:36:29",
+      "event": "dashscope_action_error",
+      "action": "roll_left",
+      "attempt": 2,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB5FF0B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:36:33",
+      "event": "dashscope_action_error",
+      "action": "roll_left",
+      "attempt": 3,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CAFAF920>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:36:35",
+      "event": "dashscope_action_failed",
+      "action": "roll_left",
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CAFAF920>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:36:35",
+      "event": "dashscope_action_start",
+      "action": "lateral",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\02_毕明友_侧位.jpg",
+      "exists": true,
+      "size": 3494279
+    },
+    {
+      "time": "2026-05-06 21:36:37",
+      "event": "dashscope_action_error",
+      "action": "lateral",
+      "attempt": 1,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB5FFC80>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:36:41",
+      "event": "dashscope_action_error",
+      "action": "lateral",
+      "attempt": 2,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB628230>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:36:45",
+      "event": "dashscope_action_error",
+      "action": "lateral",
+      "attempt": 3,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB628BF0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:36:47",
+      "event": "dashscope_action_failed",
+      "action": "lateral",
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB628BF0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:36:47",
+      "event": "dashscope_action_start",
+      "action": "roll_right",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\03_毕明友_右翻.mp4",
+      "exists": true,
+      "size": 1397604
+    },
+    {
+      "time": "2026-05-06 21:36:49",
+      "event": "dashscope_action_error",
+      "action": "roll_right",
+      "attempt": 1,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB6297C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:36:54",
+      "event": "dashscope_action_error",
+      "action": "roll_right",
+      "attempt": 2,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB5FFDA0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:36:58",
+      "event": "dashscope_action_error",
+      "action": "roll_right",
+      "attempt": 3,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB5FF6E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:00",
+      "event": "dashscope_action_failed",
+      "action": "roll_right",
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB5FF6E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:00",
+      "event": "dashscope_action_start",
+      "action": "supine_to_sit",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\04_毕明友_坐起来.mp4",
+      "exists": true,
+      "size": 850233
+    },
+    {
+      "time": "2026-05-06 21:37:02",
+      "event": "dashscope_action_error",
+      "action": "supine_to_sit",
+      "attempt": 1,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB628DD0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:06",
+      "event": "dashscope_action_error",
+      "action": "supine_to_sit",
+      "attempt": 2,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB629C10>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:10",
+      "event": "dashscope_action_error",
+      "action": "supine_to_sit",
+      "attempt": 3,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB62A5A0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:12",
+      "event": "dashscope_action_failed",
+      "action": "supine_to_sit",
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB62A5A0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:12",
+      "event": "dashscope_action_start",
+      "action": "frontal",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\06_毕明友_正位.jpg",
+      "exists": true,
+      "size": 2946858
+    },
+    {
+      "time": "2026-05-06 21:37:14",
+      "event": "dashscope_action_error",
+      "action": "frontal",
+      "attempt": 1,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB5FF8F0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:18",
+      "event": "dashscope_action_error",
+      "action": "frontal",
+      "attempt": 2,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB628A10>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:22",
+      "event": "dashscope_action_error",
+      "action": "frontal",
+      "attempt": 3,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB62A720>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:24",
+      "event": "dashscope_action_failed",
+      "action": "frontal",
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB62A720>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:24",
+      "event": "dashscope_action_start",
+      "action": "back",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-213550-b22008\\OVCF-DEMO-001\\uploads\\07_毕明友_背位.jpg",
+      "exists": true,
+      "size": 2600842
+    },
+    {
+      "time": "2026-05-06 21:37:26",
+      "event": "dashscope_action_error",
+      "action": "back",
+      "attempt": 1,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB62B500>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:30",
+      "event": "dashscope_action_error",
+      "action": "back",
+      "attempt": 2,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB62BEF0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:35",
+      "event": "dashscope_action_error",
+      "action": "back",
+      "attempt": 3,
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB5FFBC0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:37",
+      "event": "dashscope_action_failed",
+      "action": "back",
+      "error": "HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/multimodal-generation/generation (Caused by ProxyError('Unable to connect to proxy', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001A3CB5FFBC0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')))"
+    },
+    {
+      "time": "2026-05-06 21:37:37",
+      "event": "structured_flattened",
+      "present_score_count": 0,
+      "present_score_cols": [],
+      "explanation_rows": 0
+    },
+    {
+      "time": "2026-05-06 21:37:38",
+      "event": "model_bundle_loaded",
+      "feature_count": 39,
+      "threshold": 0.4514063610952404
+    },
+    {
+      "time": "2026-05-06 21:37:38",
+      "event": "missing_modalities_computed",
+      "missing_modalities": [
+        "frontal",
+        "lateral",
+        "back",
+        "roll_left",
+        "roll_right",
+        "sit_to_supine",
+        "supine_to_sit"
+      ]
+    },
+    {
+      "time": "2026-05-06 21:37:38",
+      "event": "prediction_done",
+      "probability": 0.7353492063492065,
+      "threshold": 0.4514063610952404,
+      "prediction": "OVCF",
+      "top_feature_count": 7
+    }
+  ]
+}

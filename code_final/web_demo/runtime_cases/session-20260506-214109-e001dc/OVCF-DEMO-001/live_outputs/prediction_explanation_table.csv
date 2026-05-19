@@ -1,0 +1,11 @@
+﻿feature,feature_type,display,raw_value,numeric_value_after_encoding,model_importance,positive_mean,control_mean,risk_signal,llm_score,llm_value,llm_explanation,abs_signal
+injury_history,clinical,injury_history,高能量外伤,2.0,0.11081317805524153,0.6504854368932039,0.20388349514563106,0.22162635611048306,,高能量外伤,Clinical metadata feature; no LLM explanation.,0.22162635611048306
+video_supine_to_sit__TrunkControl__score,LLM_score,video_supine_to_sit / TrunkControl,0.48,0.48,0.049858789684903294,0.6102083333333332,0.3974747474747474,0.022436455358206483,0.48,,躯干屈曲过程中出现轻微前冲趋势，起身后有小幅晃动，核心控制能力减弱,0.022436455358206483
+video_supine_to_sit__PainResponseLevel__score,LLM_score,video_supine_to_sit / PainResponseLevel,0.53,0.53,0.0636476896534381,0.47437499999999994,0.29121212121212126,0.018387110344326565,0.53,,面部表情略显紧张，动作谨慎且有屏气现象，提示中度疼痛回避行为,0.018387110344326565
+video_roll_right__SupportHandUsage__score,LLM_score,video_roll_right / SupportHandUsage,双手发力辅助,2.0,0.011972557869820382,0.979381443298969,0.9090909090909091,0.011972557869820382,0.76,双手发力辅助,双手持续推床面协助完成翻身，尤其在启动和末期阶段发力明显，存在显著代偿行为,0.011972557869820382
+video_supine_to_sit__MotionCoordination__score,LLM_score,video_supine_to_sit / MotionCoordination,0.35,0.35,0.03171390311581221,0.5416666666666667,0.35656565656565653,0.00792847577895305,0.35,,动作整体连贯，但存在轻度停顿（约0.4秒），从侧卧过渡到坐起时节奏略有中断,0.00792847577895305
+sex,clinical,sex,F,0.0,0.007892741826987414,0.19607843137254902,0.38235294117647056,-0.0,,F,Clinical metadata feature; no LLM explanation.,0.0
+smoking_history,clinical,smoking_history,无,0.0,0.009619404817803044,0.10679611650485436,0.24271844660194175,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+drinking_history,clinical,drinking_history,无,0.0,0.004155516894618274,0.13592233009708737,0.23300970873786409,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+video_supine_to_sit__ArmAssistance__score,LLM_score,video_supine_to_sit / ArmAssistance,明显依赖支撑,2.0,0.02684632602808496,1.6458333333333333,1.1616161616161615,0.0,0.57,明显依赖支撑,双上肢持续用力推床完成坐起，尤其在起身初期和中期有明显发力迹象,0.0
+image_frontal__SpinalAlignment__score,LLM_score,image_frontal / SpinalAlignment,0.32,0.32,9.088296273621413e-05,0.8410714285714282,0.8196969696969691,-4.816797025019349e-05,0.32,,C7-S1连线向右侧偏移约1.4cm，躯干存在轻度侧移，但站姿尚稳定,4.816797025019349e-05

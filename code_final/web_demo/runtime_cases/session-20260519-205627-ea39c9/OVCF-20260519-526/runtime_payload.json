@@ -1,0 +1,26 @@
+{
+  "case_id": "OVCF-20260519-526",
+  "patient_meta": {
+    "case_id": "OVCF-20260519-526",
+    "name": "test",
+    "age": "60",
+    "sex": "F",
+    "height_cm": "158",
+    "weight_kg": "80",
+    "smoking_history": "无",
+    "drinking_history": "无",
+    "injury_history": "高能量外伤"
+  },
+  "media_map": {
+    "lateral": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260519-205627-ea39c9\\OVCF-20260519-526\\uploads\\01_刁明英_侧位.jpg",
+    "frontal": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260519-205627-ea39c9\\OVCF-20260519-526\\uploads\\02_刁明英_正位.jpg",
+    "back": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260519-205627-ea39c9\\OVCF-20260519-526\\uploads\\03_刁明英_背位.jpg",
+    "supine_to_sit": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260519-205627-ea39c9\\OVCF-20260519-526\\uploads\\04_刁明英_卧到坐.mp4",
+    "roll_right": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260519-205627-ea39c9\\OVCF-20260519-526\\uploads\\05_刁明英_右翻.mp4",
+    "sit_to_supine": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260519-205627-ea39c9\\OVCF-20260519-526\\uploads\\06_刁明英_坐到卧.mp4",
+    "roll_left": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260519-205627-ea39c9\\OVCF-20260519-526\\uploads\\07_刁明英_左翻.mp4"
+  },
+  "project_root": "D:\\vscode_projects\\ovcf",
+  "code_dir": "D:\\vscode_projects\\ovcf\\code_final",
+  "output_root": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260519-205627-ea39c9\\OVCF-20260519-526\\live_outputs"
+}

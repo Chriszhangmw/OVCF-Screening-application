@@ -1,0 +1,22 @@
+{
+  "ThoracicKyphosis": {
+    "score": 0.76,
+    "explanation": "胸椎后凸明显增大，T1-T12连线形成约45°的后凸角，超过正常范围，存在显著驼背畸形"
+  },
+  "LumbarLordosis": {
+    "score": 0.83,
+    "explanation": "腰椎前凸几乎完全消失，L1-S1曲线接近平直，呈现明显扁平化，提示腰椎生理曲度严重丧失"
+  },
+  "TrunkInclination": {
+    "score": 0.72,
+    "explanation": "躯干明显前倾，C7至骨盆中心连线与垂直线夹角约17°，重心前移，需通过髋膝代偿维持站立"
+  },
+  "HeadPosition": {
+    "score": 0.81,
+    "explanation": "耳垂位于肩峰前方约3.2cm，头部显著前伸，颈椎曲度变直，存在重度头前伸姿势"
+  },
+  "SagittalBalance": {
+    "score": 0.85,
+    "explanation": "C7铅垂线前移约7.5cm，远超S1后上缘，矢状位平衡严重失衡，提示整体脊柱矢状序列紊乱"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "OVCF-LIVE-ENVTEST2",
+  "patient_meta": {
+    "sex": "F",
+    "injury_history": "high",
+    "drinking_history": "none",
+    "case_id": "OVCF-LIVE-ENVTEST2",
+    "weight_kg": "80",
+    "smoking_history": "none",
+    "height_cm": "158",
+    "age": "60"
+  },
+  "media_map": {},
+  "project_root": "D:\\vscode_projects\\ovcf",
+  "code_dir": "D:\\vscode_projects\\ovcf\\code_final",
+  "output_root": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\cases\\OVCF-LIVE-ENVTEST2\\live_outputs"
+}

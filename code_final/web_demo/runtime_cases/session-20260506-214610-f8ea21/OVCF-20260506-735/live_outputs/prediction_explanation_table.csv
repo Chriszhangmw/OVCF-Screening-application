@@ -1,0 +1,11 @@
+﻿feature,feature_type,display,raw_value,numeric_value_after_encoding,model_importance,positive_mean,control_mean,risk_signal,llm_score,llm_value,llm_explanation,abs_signal
+injury_history,clinical,injury_history,高能量外伤,2.0,0.11081317805524153,0.6504854368932039,0.20388349514563106,0.22162635611048306,,高能量外伤,Clinical metadata feature; no LLM explanation.,0.22162635611048306
+video_supine_to_sit__TrunkControl__score,LLM_score,video_supine_to_sit / TrunkControl,0.42,0.42,0.049858789684903294,0.6102083333333332,0.3974747474747474,0.014957636905470988,0.42,,躯干屈曲过程中出现轻微前冲趋势，起身后有轻微晃动，控制能力轻中度减弱,0.014957636905470988
+video_supine_to_sit__MotionCoordination__score,LLM_score,video_supine_to_sit / MotionCoordination,0.31,0.31,0.03171390311581221,0.5416666666666667,0.35656565656565653,0.004757085467371831,0.31,,动作整体连贯，但存在轻度停顿（约0.4秒）于躯干抬升中段，节奏略显不自然,0.004757085467371831
+sex,clinical,sex,F,0.0,0.007892741826987414,0.19607843137254902,0.38235294117647056,-0.0,,F,Clinical metadata feature; no LLM explanation.,0.0
+smoking_history,clinical,smoking_history,无,0.0,0.009619404817803044,0.10679611650485436,0.24271844660194175,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+drinking_history,clinical,drinking_history,无,0.0,0.004155516894618274,0.13592233009708737,0.23300970873786409,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+video_roll_right__SupportHandUsage__score,LLM_score,video_roll_right / SupportHandUsage,单手辅助,1.0,0.011972557869820382,0.979381443298969,0.9090909090909091,0.0,0.19,单手辅助,右手轻触床面并施加微小推力协助启动，发力较弱且持续时间短，属于轻度辅助,0.0
+video_supine_to_sit__ArmAssistance__score,LLM_score,video_supine_to_sit / ArmAssistance,明显依赖支撑,2.0,0.02684632602808496,1.6458333333333333,1.1616161616161615,0.0,0.58,明显依赖支撑,双上肢均参与发力，左手持续推床栏，右手辅助支撑床面完成坐起,0.0
+image_frontal__SpinalAlignment__score,LLM_score,image_frontal / SpinalAlignment,0.45,0.45,9.088296273621413e-05,0.8410714285714282,0.8196969696969691,-3.6353185094485646e-05,0.45,,C7-S1连线向右侧偏移约1.8cm，存在轻中度侧偏，躯干轴线偏离中线,3.6353185094485646e-05
+image_lateral__TrunkInclination__score,LLM_score,image_lateral / TrunkInclination,0.72,0.72,0.014676408918651419,0.7761627906976745,0.7171717171717171,-0.00044029226755954294,0.72,,躯干前倾角度大于15°，重心明显前移，需髋部后伸代偿维持站立,0.00044029226755954294

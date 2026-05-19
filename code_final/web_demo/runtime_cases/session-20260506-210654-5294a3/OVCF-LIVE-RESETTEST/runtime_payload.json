@@ -1,0 +1,17 @@
+{
+  "case_id": "OVCF-LIVE-RESETTEST",
+  "patient_meta": {
+    "sex": "F",
+    "injury_history": "高能量外伤",
+    "drinking_history": "无",
+    "case_id": "OVCF-LIVE-RESETTEST",
+    "weight_kg": "80",
+    "smoking_history": "无",
+    "height_cm": "158",
+    "age": "60"
+  },
+  "media_map": {},
+  "project_root": "D:\\vscode_projects\\ovcf",
+  "code_dir": "D:\\vscode_projects\\ovcf\\code_final",
+  "output_root": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-210654-5294a3\\OVCF-LIVE-RESETTEST\\live_outputs"
+}

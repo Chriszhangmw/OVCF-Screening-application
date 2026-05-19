@@ -1,0 +1,22 @@
+{
+  "SpinalAlignment": {
+    "score": 0.45,
+    "explanation": "C7-S1连线向右侧偏移约1.8cm，存在轻中度侧偏，躯干轴线偏离中线"
+  },
+  "ShoulderSymmetry": {
+    "score": 0.53,
+    "explanation": "右肩较左肩高约1.7cm，双肩明显不平，伴轻微胸廓旋转"
+  },
+  "PelvicLeveling": {
+    "score": 0.42,
+    "explanation": "左侧髂嵴较右侧低约1.6cm，骨盆存在轻中度倾斜"
+  },
+  "CoronalCurvature": {
+    "score": 0.58,
+    "explanation": "脊柱关键点呈现中度S形弯曲，最大横向偏移约2.8cm，冠状面曲度明显"
+  },
+  "GlobalBalance": {
+    "score": 0.55,
+    "explanation": "头部中心与骨盆中心偏离垂直轴约2.4cm，整体重心失衡，需代偿维持站立"
+  }
+}

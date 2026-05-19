@@ -1,0 +1,23 @@
+{
+  "MotionCoordination": {
+    "score": 0.67,
+    "explanation": "动作明显分阶段完成，存在多次停顿和节奏中断，尤其在躯干后移过程中出现明显犹豫"
+  },
+  "TrunkControl": {
+    "score": 0.82,
+    "explanation": "躯干下落过程中出现明显突然趋势，控制严重不足，依赖上肢支撑缓冲，末段几乎失控"
+  },
+  "ArmAssistance": {
+    "score": 0.91,
+    "value": "明显依赖支撑",
+    "explanation": "双手持续发力支撑床面以减速，尤其在躯干后移后期完全依赖双臂控制下落，表现为重度辅助"
+  },
+  "ExecutionTime": {
+    "score": 0.75,
+    "explanation": "整体耗时显著延长（约3.8秒），存在明显迟疑与反复调整，反映动作效率低下"
+  },
+  "PainResponseLevel": {
+    "score": 0.78,
+    "explanation": "动作全程伴有明显疼痛回避行为，包括面部紧绷、缓慢控制及保护性姿势，提示重度疼痛影响"
+  }
+}

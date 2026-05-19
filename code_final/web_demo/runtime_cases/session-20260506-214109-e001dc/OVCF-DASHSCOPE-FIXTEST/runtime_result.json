@@ -1,0 +1,568 @@
+{
+  "ok": true,
+  "case_id": "OVCF-DASHSCOPE-FIXTEST",
+  "analysis_mode": "live_model",
+  "report": {
+    "patient": "OVCF-DASHSCOPE-FIXTEST",
+    "clinical_meta_used": {
+      "age": "60",
+      "sex": "F",
+      "height_cm": "158",
+      "weight_kg": "80",
+      "smoking_history": "无",
+      "drinking_history": "无",
+      "injury_history": "高能量外伤"
+    },
+    "clinical_meta_source": "web_form",
+    "ovcf_probability": 0.6998201058201061,
+    "threshold": 0.4514063610952404,
+    "prediction": "OVCF",
+    "missing_modalities": [
+      "lateral",
+      "back",
+      "roll_left",
+      "roll_right",
+      "sit_to_supine",
+      "supine_to_sit"
+    ],
+    "model_training_summary": {
+      "n_samples": 206,
+      "n_positive": 103,
+      "n_control": 103,
+      "cv_metrics_at_0_50": {
+        "threshold": 0.5,
+        "auc": 0.8259025355829956,
+        "accuracy": 0.7475728155339806,
+        "f1": 0.75,
+        "sensitivity": 0.7572815533980582,
+        "specificity": 0.7378640776699029,
+        "tp": 78,
+        "fp": 27,
+        "tn": 76,
+        "fn": 25
+      },
+      "cv_metrics_at_youden": {
+        "threshold": 0.4514063610952404,
+        "auc": 0.8259025355829956,
+        "accuracy": 0.7766990291262136,
+        "f1": 0.7927927927927928,
+        "sensitivity": 0.8543689320388349,
+        "specificity": 0.6990291262135923,
+        "tp": 88,
+        "fp": 31,
+        "tn": 72,
+        "fn": 15
+      },
+      "holdout_metrics_at_youden": {
+        "threshold": 0.4514063610952404,
+        "auc": 0.7959183673469388,
+        "accuracy": 0.7142857142857143,
+        "f1": 0.7692307692307693,
+        "sensitivity": 0.9523809523809523,
+        "specificity": 0.47619047619047616,
+        "tp": 20,
+        "fp": 11,
+        "tn": 10,
+        "fn": 1
+      }
+    },
+    "top_explanatory_features": [
+      {
+        "feature": "injury_history",
+        "feature_type": "clinical",
+        "display": "injury_history",
+        "raw_value": "高能量外伤",
+        "numeric_value_after_encoding": 2.0,
+        "model_importance": 0.11081317805524153,
+        "positive_mean": 0.6504854368932039,
+        "control_mean": 0.20388349514563106,
+        "risk_signal": 0.22162635611048306,
+        "llm_score": NaN,
+        "llm_value": "高能量外伤",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.22162635611048306
+      },
+      {
+        "feature": "sex",
+        "feature_type": "clinical",
+        "display": "sex",
+        "raw_value": "F",
+        "numeric_value_after_encoding": 0.0,
+        "model_importance": 0.007892741826987414,
+        "positive_mean": 0.19607843137254902,
+        "control_mean": 0.38235294117647056,
+        "risk_signal": -0.0,
+        "llm_score": NaN,
+        "llm_value": "F",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.0
+      },
+      {
+        "feature": "smoking_history",
+        "feature_type": "clinical",
+        "display": "smoking_history",
+        "raw_value": "无",
+        "numeric_value_after_encoding": 0.0,
+        "model_importance": 0.009619404817803044,
+        "positive_mean": 0.10679611650485436,
+        "control_mean": 0.24271844660194175,
+        "risk_signal": -0.0,
+        "llm_score": NaN,
+        "llm_value": "无",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.0
+      },
+      {
+        "feature": "drinking_history",
+        "feature_type": "clinical",
+        "display": "drinking_history",
+        "raw_value": "无",
+        "numeric_value_after_encoding": 0.0,
+        "model_importance": 0.004155516894618274,
+        "positive_mean": 0.13592233009708737,
+        "control_mean": 0.23300970873786409,
+        "risk_signal": -0.0,
+        "llm_score": NaN,
+        "llm_value": "无",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.0
+      },
+      {
+        "feature": "image_frontal__SpinalAlignment__score",
+        "feature_type": "LLM_score",
+        "display": "image_frontal / SpinalAlignment",
+        "raw_value": 0.52,
+        "numeric_value_after_encoding": 0.52,
+        "model_importance": 9.088296273621413e-05,
+        "positive_mean": 0.8410714285714282,
+        "control_mean": 0.8196969696969691,
+        "risk_signal": -2.999137770295066e-05,
+        "llm_score": 0.52,
+        "llm_value": NaN,
+        "llm_explanation": "C7-S1连线向右侧偏移约2.3cm，躯干轴线明显偏离中线",
+        "abs_signal": 2.999137770295066e-05
+      },
+      {
+        "feature": "image_frontal__ShoulderSymmetry__score",
+        "feature_type": "LLM_score",
+        "display": "image_frontal / ShoulderSymmetry",
+        "raw_value": 0.61,
+        "numeric_value_after_encoding": 0.61,
+        "model_importance": 0.00869456198317547,
+        "positive_mean": 0.8160714285714287,
+        "control_mean": 0.8050505050505053,
+        "risk_signal": -0.012607114875604428,
+        "llm_score": 0.61,
+        "llm_value": NaN,
+        "llm_explanation": "右肩较左侧高约2.1cm，伴轻度胸廓旋转代偿",
+        "abs_signal": 0.012607114875604428
+      },
+      {
+        "feature": "height_cm",
+        "feature_type": "clinical",
+        "display": "height_cm",
+        "raw_value": "158",
+        "numeric_value_after_encoding": 158.0,
+        "model_importance": 0.04212110040661493,
+        "positive_mean": 153.76530612244898,
+        "control_mean": 157.38,
+        "risk_signal": -0.01263633012198448,
+        "llm_score": NaN,
+        "llm_value": "158",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.01263633012198448
+      },
+      {
+        "feature": "image_frontal__PelvicLeveling__score",
+        "feature_type": "LLM_score",
+        "display": "image_frontal / PelvicLeveling",
+        "raw_value": 0.48,
+        "numeric_value_after_encoding": 0.48,
+        "model_importance": 0.010731259458858838,
+        "positive_mean": 0.7142857142857143,
+        "control_mean": 0.7040404040404042,
+        "risk_signal": -0.02897440053891887,
+        "llm_score": 0.48,
+        "llm_value": NaN,
+        "llm_explanation": "右侧髂嵴低约1.8cm，骨盆存在中度侧倾",
+        "abs_signal": 0.02897440053891887
+      },
+      {
+        "feature": "image_frontal__CoronalCurvature__score",
+        "feature_type": "LLM_score",
+        "display": "image_frontal / CoronalCurvature",
+        "raw_value": 0.58,
+        "numeric_value_after_encoding": 0.58,
+        "model_importance": 0.01601305830833617,
+        "positive_mean": 0.8351190476190476,
+        "control_mean": 0.8267676767676768,
+        "risk_signal": -0.035228728278339595,
+        "llm_score": 0.58,
+        "llm_value": NaN,
+        "llm_explanation": "脊柱关键点形成S形趋势，最大横向偏移约2.6cm，提示冠状面失衡",
+        "abs_signal": 0.035228728278339595
+      },
+      {
+        "feature": "age",
+        "feature_type": "clinical",
+        "display": "age",
+        "raw_value": "60",
+        "numeric_value_after_encoding": 60.0,
+        "model_importance": 0.08679586707521984,
+        "positive_mean": 71.32,
+        "control_mean": 65.03960396039604,
+        "risk_signal": -0.061997047910871315,
+        "llm_score": NaN,
+        "llm_value": "60",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.061997047910871315
+      }
+    ],
+    "note": "Research model output; not a substitute for clinical diagnosis."
+  },
+  "explanation_table": [
+    {
+      "feature": "injury_history",
+      "feature_type": "clinical",
+      "display": "injury_history",
+      "raw_value": "高能量外伤",
+      "numeric_value_after_encoding": 2.0,
+      "model_importance": 0.11081317805524153,
+      "positive_mean": 0.6504854368932039,
+      "control_mean": 0.20388349514563106,
+      "risk_signal": 0.22162635611048306,
+      "llm_score": NaN,
+      "llm_value": "高能量外伤",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.22162635611048306
+    },
+    {
+      "feature": "sex",
+      "feature_type": "clinical",
+      "display": "sex",
+      "raw_value": "F",
+      "numeric_value_after_encoding": 0.0,
+      "model_importance": 0.007892741826987414,
+      "positive_mean": 0.19607843137254902,
+      "control_mean": 0.38235294117647056,
+      "risk_signal": -0.0,
+      "llm_score": NaN,
+      "llm_value": "F",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.0
+    },
+    {
+      "feature": "smoking_history",
+      "feature_type": "clinical",
+      "display": "smoking_history",
+      "raw_value": "无",
+      "numeric_value_after_encoding": 0.0,
+      "model_importance": 0.009619404817803044,
+      "positive_mean": 0.10679611650485436,
+      "control_mean": 0.24271844660194175,
+      "risk_signal": -0.0,
+      "llm_score": NaN,
+      "llm_value": "无",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.0
+    },
+    {
+      "feature": "drinking_history",
+      "feature_type": "clinical",
+      "display": "drinking_history",
+      "raw_value": "无",
+      "numeric_value_after_encoding": 0.0,
+      "model_importance": 0.004155516894618274,
+      "positive_mean": 0.13592233009708737,
+      "control_mean": 0.23300970873786409,
+      "risk_signal": -0.0,
+      "llm_score": NaN,
+      "llm_value": "无",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.0
+    },
+    {
+      "feature": "image_frontal__SpinalAlignment__score",
+      "feature_type": "LLM_score",
+      "display": "image_frontal / SpinalAlignment",
+      "raw_value": 0.52,
+      "numeric_value_after_encoding": 0.52,
+      "model_importance": 9.088296273621413e-05,
+      "positive_mean": 0.8410714285714282,
+      "control_mean": 0.8196969696969691,
+      "risk_signal": -2.999137770295066e-05,
+      "llm_score": 0.52,
+      "llm_value": NaN,
+      "llm_explanation": "C7-S1连线向右侧偏移约2.3cm，躯干轴线明显偏离中线",
+      "abs_signal": 2.999137770295066e-05
+    },
+    {
+      "feature": "image_frontal__ShoulderSymmetry__score",
+      "feature_type": "LLM_score",
+      "display": "image_frontal / ShoulderSymmetry",
+      "raw_value": 0.61,
+      "numeric_value_after_encoding": 0.61,
+      "model_importance": 0.00869456198317547,
+      "positive_mean": 0.8160714285714287,
+      "control_mean": 0.8050505050505053,
+      "risk_signal": -0.012607114875604428,
+      "llm_score": 0.61,
+      "llm_value": NaN,
+      "llm_explanation": "右肩较左侧高约2.1cm，伴轻度胸廓旋转代偿",
+      "abs_signal": 0.012607114875604428
+    },
+    {
+      "feature": "height_cm",
+      "feature_type": "clinical",
+      "display": "height_cm",
+      "raw_value": "158",
+      "numeric_value_after_encoding": 158.0,
+      "model_importance": 0.04212110040661493,
+      "positive_mean": 153.76530612244898,
+      "control_mean": 157.38,
+      "risk_signal": -0.01263633012198448,
+      "llm_score": NaN,
+      "llm_value": "158",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.01263633012198448
+    },
+    {
+      "feature": "image_frontal__PelvicLeveling__score",
+      "feature_type": "LLM_score",
+      "display": "image_frontal / PelvicLeveling",
+      "raw_value": 0.48,
+      "numeric_value_after_encoding": 0.48,
+      "model_importance": 0.010731259458858838,
+      "positive_mean": 0.7142857142857143,
+      "control_mean": 0.7040404040404042,
+      "risk_signal": -0.02897440053891887,
+      "llm_score": 0.48,
+      "llm_value": NaN,
+      "llm_explanation": "右侧髂嵴低约1.8cm，骨盆存在中度侧倾",
+      "abs_signal": 0.02897440053891887
+    },
+    {
+      "feature": "image_frontal__CoronalCurvature__score",
+      "feature_type": "LLM_score",
+      "display": "image_frontal / CoronalCurvature",
+      "raw_value": 0.58,
+      "numeric_value_after_encoding": 0.58,
+      "model_importance": 0.01601305830833617,
+      "positive_mean": 0.8351190476190476,
+      "control_mean": 0.8267676767676768,
+      "risk_signal": -0.035228728278339595,
+      "llm_score": 0.58,
+      "llm_value": NaN,
+      "llm_explanation": "脊柱关键点形成S形趋势，最大横向偏移约2.6cm，提示冠状面失衡",
+      "abs_signal": 0.035228728278339595
+    },
+    {
+      "feature": "age",
+      "feature_type": "clinical",
+      "display": "age",
+      "raw_value": "60",
+      "numeric_value_after_encoding": 60.0,
+      "model_importance": 0.08679586707521984,
+      "positive_mean": 71.32,
+      "control_mean": 65.03960396039604,
+      "risk_signal": -0.061997047910871315,
+      "llm_score": NaN,
+      "llm_value": "60",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.061997047910871315
+    }
+  ],
+  "llm_explanations": [
+    {
+      "patient": "OVCF-DASHSCOPE-FIXTEST",
+      "action": "frontal",
+      "prefix": "image_frontal",
+      "indicator": "SpinalAlignment",
+      "score_column": "image_frontal__SpinalAlignment__score",
+      "value_for_model": 0.52,
+      "score": 0.52,
+      "value": NaN,
+      "explanation": "C7-S1连线向右侧偏移约2.3cm，躯干轴线明显偏离中线",
+      "json": "{\"score\": 0.52, \"explanation\": \"C7-S1连线向右侧偏移约2.3cm，躯干轴线明显偏离中线\"}"
+    },
+    {
+      "patient": "OVCF-DASHSCOPE-FIXTEST",
+      "action": "frontal",
+      "prefix": "image_frontal",
+      "indicator": "ShoulderSymmetry",
+      "score_column": "image_frontal__ShoulderSymmetry__score",
+      "value_for_model": 0.61,
+      "score": 0.61,
+      "value": NaN,
+      "explanation": "右肩较左侧高约2.1cm，伴轻度胸廓旋转代偿",
+      "json": "{\"score\": 0.61, \"explanation\": \"右肩较左侧高约2.1cm，伴轻度胸廓旋转代偿\"}"
+    },
+    {
+      "patient": "OVCF-DASHSCOPE-FIXTEST",
+      "action": "frontal",
+      "prefix": "image_frontal",
+      "indicator": "PelvicLeveling",
+      "score_column": "image_frontal__PelvicLeveling__score",
+      "value_for_model": 0.48,
+      "score": 0.48,
+      "value": NaN,
+      "explanation": "右侧髂嵴低约1.8cm，骨盆存在中度侧倾",
+      "json": "{\"score\": 0.48, \"explanation\": \"右侧髂嵴低约1.8cm，骨盆存在中度侧倾\"}"
+    },
+    {
+      "patient": "OVCF-DASHSCOPE-FIXTEST",
+      "action": "frontal",
+      "prefix": "image_frontal",
+      "indicator": "CoronalCurvature",
+      "score_column": "image_frontal__CoronalCurvature__score",
+      "value_for_model": 0.58,
+      "score": 0.58,
+      "value": NaN,
+      "explanation": "脊柱关键点形成S形趋势，最大横向偏移约2.6cm，提示冠状面失衡",
+      "json": "{\"score\": 0.58, \"explanation\": \"脊柱关键点形成S形趋势，最大横向偏移约2.6cm，提示冠状面失衡\"}"
+    },
+    {
+      "patient": "OVCF-DASHSCOPE-FIXTEST",
+      "action": "frontal",
+      "prefix": "image_frontal",
+      "indicator": "GlobalBalance",
+      "score_column": "image_frontal__GlobalBalance__score",
+      "value_for_model": 0.55,
+      "score": 0.55,
+      "value": NaN,
+      "explanation": "头部中心与骨盆中心偏离垂直轴约2.4cm，整体重心偏移明显",
+      "json": "{\"score\": 0.55, \"explanation\": \"头部中心与骨盆中心偏离垂直轴约2.4cm，整体重心偏移明显\"}"
+    }
+  ],
+  "structured": {
+    "frontal": {
+      "SpinalAlignment": {
+        "score": 0.52,
+        "explanation": "C7-S1连线向右侧偏移约2.3cm，躯干轴线明显偏离中线"
+      },
+      "ShoulderSymmetry": {
+        "score": 0.61,
+        "explanation": "右肩较左侧高约2.1cm，伴轻度胸廓旋转代偿"
+      },
+      "PelvicLeveling": {
+        "score": 0.48,
+        "explanation": "右侧髂嵴低约1.8cm，骨盆存在中度侧倾"
+      },
+      "CoronalCurvature": {
+        "score": 0.58,
+        "explanation": "脊柱关键点形成S形趋势，最大横向偏移约2.6cm，提示冠状面失衡"
+      },
+      "GlobalBalance": {
+        "score": 0.55,
+        "explanation": "头部中心与骨盆中心偏离垂直轴约2.4cm，整体重心偏移明显"
+      }
+    }
+  },
+  "media": [
+    {
+      "role": "frontal",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-214109-e001dc\\OVCF-DASHSCOPE-FIXTEST\\uploads\\01_毕明友_正位.jpg",
+      "name": "01_毕明友_正位.jpg"
+    }
+  ],
+  "logs": [
+    {
+      "time": "2026-05-06 21:41:27",
+      "event": "runtime_payload_loaded",
+      "case_id": "OVCF-DASHSCOPE-FIXTEST",
+      "media_roles": [
+        "frontal"
+      ],
+      "media_paths": {
+        "frontal": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-214109-e001dc\\OVCF-DASHSCOPE-FIXTEST\\uploads\\01_毕明友_正位.jpg"
+      }
+    },
+    {
+      "time": "2026-05-06 21:41:27",
+      "event": "api_key_ready",
+      "source": "environment_or_embedded",
+      "key_present": true
+    },
+    {
+      "time": "2026-05-06 21:41:27",
+      "event": "prompts_loaded",
+      "prompt_count": 6,
+      "prompt_keys": [
+        "image_back.txt",
+        "image_frontal.txt",
+        "image_lateral.txt",
+        "video_roll.txt",
+        "video_sit_to_supine.txt",
+        "video_supine_to_sit.txt"
+      ]
+    },
+    {
+      "time": "2026-05-06 21:41:27",
+      "event": "dashscope_action_start",
+      "action": "frontal",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-214109-e001dc\\OVCF-DASHSCOPE-FIXTEST\\uploads\\01_毕明友_正位.jpg",
+      "exists": true,
+      "size": 2946858
+    },
+    {
+      "time": "2026-05-06 21:41:38",
+      "event": "dashscope_action_success",
+      "action": "frontal",
+      "attempt": 1,
+      "result_keys": [
+        "SpinalAlignment",
+        "ShoulderSymmetry",
+        "PelvicLeveling",
+        "CoronalCurvature",
+        "GlobalBalance"
+      ],
+      "indicator_count": 5,
+      "indicators": [
+        "SpinalAlignment",
+        "ShoulderSymmetry",
+        "PelvicLeveling",
+        "CoronalCurvature",
+        "GlobalBalance"
+      ]
+    },
+    {
+      "time": "2026-05-06 21:41:38",
+      "event": "structured_flattened",
+      "present_score_count": 5,
+      "present_score_cols": [
+        "image_frontal__CoronalCurvature__score",
+        "image_frontal__GlobalBalance__score",
+        "image_frontal__PelvicLeveling__score",
+        "image_frontal__ShoulderSymmetry__score",
+        "image_frontal__SpinalAlignment__score"
+      ],
+      "explanation_rows": 5
+    },
+    {
+      "time": "2026-05-06 21:41:39",
+      "event": "model_bundle_loaded",
+      "feature_count": 39,
+      "threshold": 0.4514063610952404
+    },
+    {
+      "time": "2026-05-06 21:41:39",
+      "event": "missing_modalities_computed",
+      "missing_modalities": [
+        "lateral",
+        "back",
+        "roll_left",
+        "roll_right",
+        "sit_to_supine",
+        "supine_to_sit"
+      ]
+    },
+    {
+      "time": "2026-05-06 21:41:39",
+      "event": "prediction_done",
+      "probability": 0.6998201058201061,
+      "threshold": 0.4514063610952404,
+      "prediction": "OVCF",
+      "top_feature_count": 10
+    }
+  ]
+}

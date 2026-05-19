@@ -1,0 +1,18 @@
+{
+  "SpinalVerticality": {
+    "score": 0.32,
+    "explanation": "C7-S1连线向右侧偏移约1.3cm，躯干冠状位力线轻微偏离中轴，无明显代偿动作"
+  },
+  "ScapularSymmetry": {
+    "score": 0.45,
+    "explanation": "右侧肩胛骨下角较左侧高约1.1cm，可见轻度肩部不对称，提示胸椎可能存在轻度旋转或侧弯"
+  },
+  "PelvicRotation": {
+    "score": 0.28,
+    "explanation": "右侧髂前上棘略前移约0.8cm，骨盆存在轻微旋转，但未引起明显代偿姿势"
+  },
+  "ParaspinalTensionAsymmetry": {
+    "score": 0.42,
+    "explanation": "左侧竖脊肌肌腹轮廓略隆起，张力较右侧稍高，提示存在轻度单侧肌肉代偿"
+  }
+}

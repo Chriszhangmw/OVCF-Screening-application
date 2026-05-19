@@ -1,0 +1,25 @@
+{
+  "case_id": "OVCF-20260506-735",
+  "patient_meta": {
+    "case_id": "OVCF-20260506-735",
+    "name": "",
+    "age": "60",
+    "sex": "F",
+    "height_cm": "158",
+    "weight_kg": "80",
+    "smoking_history": "无",
+    "drinking_history": "无",
+    "injury_history": "高能量外伤"
+  },
+  "media_map": {
+    "roll_left": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-214610-f8ea21\\OVCF-20260506-735\\uploads\\01_毕明友_仰卧.mp4",
+    "lateral": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-214610-f8ea21\\OVCF-20260506-735\\uploads\\02_毕明友_侧位.jpg",
+    "roll_right": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-214610-f8ea21\\OVCF-20260506-735\\uploads\\03_毕明友_右翻.mp4",
+    "supine_to_sit": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-214610-f8ea21\\OVCF-20260506-735\\uploads\\04_毕明友_坐起来.mp4",
+    "frontal": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-214610-f8ea21\\OVCF-20260506-735\\uploads\\06_毕明友_正位.jpg",
+    "back": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-214610-f8ea21\\OVCF-20260506-735\\uploads\\07_毕明友_背位.jpg"
+  },
+  "project_root": "D:\\vscode_projects\\ovcf",
+  "code_dir": "D:\\vscode_projects\\ovcf\\code_final",
+  "output_root": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260506-214610-f8ea21\\OVCF-20260506-735\\live_outputs"
+}

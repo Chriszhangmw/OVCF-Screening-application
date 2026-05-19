@@ -1,0 +1,11 @@
+﻿feature,feature_type,display,raw_value,numeric_value_after_encoding,model_importance,positive_mean,control_mean,risk_signal,llm_score,llm_value,llm_explanation,abs_signal
+video_roll_right__SupportHandUsage__score,LLM_score,video_roll_right / SupportHandUsage,双手发力辅助,2.0,0.011972557869820382,0.979381443298969,0.9090909090909091,0.011972557869820382,0.91,双手发力辅助,双手持续推床栏杆以协助完成翻身，发力明显且贯穿整个动作过程，属于重度代偿行为,0.011972557869820382
+video_roll_left__SupportHandUsage__score,LLM_score,video_roll_left / SupportHandUsage,双手发力辅助,2.0,0.009944581545522987,1.04,1.0,0.009944581545522987,0.82,双手发力辅助,双手持续推床栏杆完成翻身，尤其在右侧翻转时双臂明显发力，代偿作用显著,0.009944581545522987
+video_sit_to_supine__PainResponseLevel__score,LLM_score,video_sit_to_supine / PainResponseLevel,0.69,0.69,0.023069241083944626,0.6577777777777777,0.6404040404040404,0.009227696433577836,0.69,,面部表情紧张，动作中出现保护性减幅与缓慢控制，提示存在中度至重度疼痛回避行为,0.009227696433577836
+video_sit_to_supine__ExecutionTime__score,LLM_score,video_sit_to_supine / ExecutionTime,0.71,0.71,0.020453862957552638,0.6772222222222223,0.6772727272727272,0.008181545183021064,0.71,,整体耗时约3.8秒，动作缓慢且伴有频繁停顿，反映出高度谨慎与迟疑，远超正常完成时间范围,0.008181545183021064
+video_sit_to_supine__MotionCoordination__score,LLM_score,video_sit_to_supine / MotionCoordination,0.68,0.68,0.014477470756807073,0.6855555555555556,0.6924242424242425,0.005067114764882473,0.68,,动作明显分阶段完成，存在多次停顿与节奏中断，从坐位到仰卧过程中出现明显的动作分解，如先屈膝、再侧身、最后翻转，缺乏流畅性,0.005067114764882473
+sex,clinical,sex,F,0.0,0.007892741826987414,0.19607843137254902,0.38235294117647056,-0.0,,F,Clinical metadata feature; no LLM explanation.,0.0
+smoking_history,clinical,smoking_history,无,0.0,0.009619404817803044,0.10679611650485436,0.24271844660194175,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+drinking_history,clinical,drinking_history,无,0.0,0.004155516894618274,0.13592233009708737,0.23300970873786409,-0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+injury_history,clinical,injury_history,无,0.0,0.11081317805524153,0.6504854368932039,0.20388349514563106,0.0,,无,Clinical metadata feature; no LLM explanation.,0.0
+video_sit_to_supine__ArmAssistance__score,LLM_score,video_sit_to_supine / ArmAssistance,明显依赖支撑,2.0,0.002447965285701551,1.9222222222222223,1.8686868686868687,0.0,0.82,明显依赖支撑,双上肢全程参与减速与支撑，尤其在躯干后移时双手持续发力按压床面以稳定身体，表明核心控制能力显著下降,0.0

@@ -1,0 +1,11 @@
+{
+  "case_id": "OVCF-DEMO-001",
+  "name": "eee",
+  "age": "60",
+  "sex": "F",
+  "height_cm": "158",
+  "weight_kg": "80",
+  "smoking_history": "无",
+  "drinking_history": "无",
+  "injury_history": "无"
+}

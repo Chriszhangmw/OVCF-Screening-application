@@ -1,0 +1,2 @@
+﻿patient,case_id,name,age,sex,height_cm,weight_kg,smoking_history,drinking_history,injury_history
+OVCF-DEMO-001,OVCF-DEMO-001,,60,F,158,80,无,无,高能量外伤

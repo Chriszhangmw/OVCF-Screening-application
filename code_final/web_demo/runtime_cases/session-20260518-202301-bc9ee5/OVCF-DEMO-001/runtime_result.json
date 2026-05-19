@@ -1,0 +1,1164 @@
+{
+  "ok": true,
+  "case_id": "OVCF-DEMO-001",
+  "analysis_mode": "live_model",
+  "report": {
+    "patient": "OVCF-DEMO-001",
+    "clinical_meta_used": {
+      "age": "60",
+      "sex": "F",
+      "height_cm": "158",
+      "weight_kg": "80",
+      "smoking_history": "无",
+      "drinking_history": "无",
+      "injury_history": "无"
+    },
+    "clinical_meta_source": "web_form",
+    "ovcf_probability": 0.28044708994708994,
+    "threshold": 0.4514063610952404,
+    "prediction": "control/non-OVCF",
+    "missing_modalities": [
+      "supine_to_sit"
+    ],
+    "model_training_summary": {
+      "n_samples": 206,
+      "n_positive": 103,
+      "n_control": 103,
+      "cv_metrics_at_0_50": {
+        "threshold": 0.5,
+        "auc": 0.8259025355829956,
+        "accuracy": 0.7475728155339806,
+        "f1": 0.75,
+        "sensitivity": 0.7572815533980582,
+        "specificity": 0.7378640776699029,
+        "tp": 78,
+        "fp": 27,
+        "tn": 76,
+        "fn": 25
+      },
+      "cv_metrics_at_youden": {
+        "threshold": 0.4514063610952404,
+        "auc": 0.8259025355829956,
+        "accuracy": 0.7766990291262136,
+        "f1": 0.7927927927927928,
+        "sensitivity": 0.8543689320388349,
+        "specificity": 0.6990291262135923,
+        "tp": 88,
+        "fp": 31,
+        "tn": 72,
+        "fn": 15
+      },
+      "holdout_metrics_at_youden": {
+        "threshold": 0.4514063610952404,
+        "auc": 0.7959183673469388,
+        "accuracy": 0.7142857142857143,
+        "f1": 0.7692307692307693,
+        "sensitivity": 0.9523809523809523,
+        "specificity": 0.47619047619047616,
+        "tp": 20,
+        "fp": 11,
+        "tn": 10,
+        "fn": 1
+      }
+    },
+    "top_explanatory_features": [
+      {
+        "feature": "video_sit_to_supine__PainResponseLevel__score",
+        "feature_type": "LLM_score",
+        "display": "video_sit_to_supine / PainResponseLevel",
+        "raw_value": 0.78,
+        "numeric_value_after_encoding": 0.78,
+        "model_importance": 0.023069241083944626,
+        "positive_mean": 0.6577777777777777,
+        "control_mean": 0.6404040404040404,
+        "risk_signal": 0.02999001340912802,
+        "llm_score": 0.78,
+        "llm_value": NaN,
+        "llm_explanation": "动作全程伴有明显疼痛回避行为，包括面部紧绷、缓慢控制及保护性姿势，提示重度疼痛影响",
+        "abs_signal": 0.02999001340912802
+      },
+      {
+        "feature": "video_roll_right__SupportHandUsage__score",
+        "feature_type": "LLM_score",
+        "display": "video_roll_right / SupportHandUsage",
+        "raw_value": "双手发力辅助",
+        "numeric_value_after_encoding": 2.0,
+        "model_importance": 0.011972557869820382,
+        "positive_mean": 0.979381443298969,
+        "control_mean": 0.9090909090909091,
+        "risk_signal": 0.011972557869820382,
+        "llm_score": 0.79,
+        "llm_value": "双手发力辅助",
+        "llm_explanation": "双手持续抓握床栏并用力推压以协助完成翻身，尤其在躯干抬升阶段发力明显，显示显著的上肢代偿行为",
+        "abs_signal": 0.011972557869820382
+      },
+      {
+        "feature": "video_roll_left__SupportHandUsage__score",
+        "feature_type": "LLM_score",
+        "display": "video_roll_left / SupportHandUsage",
+        "raw_value": "双手发力辅助",
+        "numeric_value_after_encoding": 2.0,
+        "model_importance": 0.009944581545522987,
+        "positive_mean": 1.04,
+        "control_mean": 1.0,
+        "risk_signal": 0.009944581545522987,
+        "llm_score": 0.79,
+        "llm_value": "双手发力辅助",
+        "llm_explanation": "双手持续抓握床栏并用力推压，协助完成翻身，尤其在仰卧至侧卧阶段依赖上肢支撑，代偿明显",
+        "abs_signal": 0.009944581545522987
+      },
+      {
+        "feature": "video_sit_to_supine__MotionCoordination__score",
+        "feature_type": "LLM_score",
+        "display": "video_sit_to_supine / MotionCoordination",
+        "raw_value": 0.67,
+        "numeric_value_after_encoding": 0.67,
+        "model_importance": 0.014477470756807073,
+        "positive_mean": 0.6855555555555556,
+        "control_mean": 0.6924242424242425,
+        "risk_signal": 0.005790988302722828,
+        "llm_score": 0.67,
+        "llm_value": NaN,
+        "llm_explanation": "动作明显分阶段完成，存在多次停顿和节奏中断，尤其在躯干后移过程中出现明显犹豫",
+        "abs_signal": 0.005790988302722828
+      },
+      {
+        "feature": "video_sit_to_supine__TrunkControl__score",
+        "feature_type": "LLM_score",
+        "display": "video_sit_to_supine / TrunkControl",
+        "raw_value": 0.82,
+        "numeric_value_after_encoding": 0.82,
+        "model_importance": 0.015712077380703172,
+        "positive_mean": 0.8016666666666669,
+        "control_mean": 0.7964646464646464,
+        "risk_signal": 0.0031424154761406204,
+        "llm_score": 0.82,
+        "llm_value": NaN,
+        "llm_explanation": "躯干下落过程中出现明显突然趋势，控制严重不足，依赖上肢支撑缓冲，末段几乎失控",
+        "abs_signal": 0.0031424154761406204
+      },
+      {
+        "feature": "video_roll_left__PainDuringMovement__score",
+        "feature_type": "LLM_score",
+        "display": "video_roll_left / PainDuringMovement",
+        "raw_value": 0.58,
+        "numeric_value_after_encoding": 0.58,
+        "model_importance": 0.022561542534102256,
+        "positive_mean": 0.5819999999999999,
+        "control_mean": 0.4938775510204081,
+        "risk_signal": 0.0013536925520461316,
+        "llm_score": 0.58,
+        "llm_value": NaN,
+        "llm_explanation": "翻身过程中出现中度迟疑，头部抬起后有短暂停滞，面部表情略显紧张，提示存在疼痛干扰",
+        "abs_signal": 0.0013536925520461316
+      },
+      {
+        "feature": "sex",
+        "feature_type": "clinical",
+        "display": "sex",
+        "raw_value": "F",
+        "numeric_value_after_encoding": 0.0,
+        "model_importance": 0.007892741826987414,
+        "positive_mean": 0.19607843137254902,
+        "control_mean": 0.38235294117647056,
+        "risk_signal": -0.0,
+        "llm_score": NaN,
+        "llm_value": "F",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.0
+      },
+      {
+        "feature": "smoking_history",
+        "feature_type": "clinical",
+        "display": "smoking_history",
+        "raw_value": "无",
+        "numeric_value_after_encoding": 0.0,
+        "model_importance": 0.009619404817803044,
+        "positive_mean": 0.10679611650485436,
+        "control_mean": 0.24271844660194175,
+        "risk_signal": -0.0,
+        "llm_score": NaN,
+        "llm_value": "无",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.0
+      },
+      {
+        "feature": "drinking_history",
+        "feature_type": "clinical",
+        "display": "drinking_history",
+        "raw_value": "无",
+        "numeric_value_after_encoding": 0.0,
+        "model_importance": 0.004155516894618274,
+        "positive_mean": 0.13592233009708737,
+        "control_mean": 0.23300970873786409,
+        "risk_signal": -0.0,
+        "llm_score": NaN,
+        "llm_value": "无",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.0
+      },
+      {
+        "feature": "injury_history",
+        "feature_type": "clinical",
+        "display": "injury_history",
+        "raw_value": "无",
+        "numeric_value_after_encoding": 0.0,
+        "model_importance": 0.11081317805524153,
+        "positive_mean": 0.6504854368932039,
+        "control_mean": 0.20388349514563106,
+        "risk_signal": 0.0,
+        "llm_score": NaN,
+        "llm_value": "无",
+        "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+        "abs_signal": 0.0
+      }
+    ],
+    "note": "Research model output; not a substitute for clinical diagnosis."
+  },
+  "explanation_table": [
+    {
+      "feature": "video_sit_to_supine__PainResponseLevel__score",
+      "feature_type": "LLM_score",
+      "display": "video_sit_to_supine / PainResponseLevel",
+      "raw_value": 0.78,
+      "numeric_value_after_encoding": 0.78,
+      "model_importance": 0.023069241083944626,
+      "positive_mean": 0.6577777777777777,
+      "control_mean": 0.6404040404040404,
+      "risk_signal": 0.02999001340912802,
+      "llm_score": 0.78,
+      "llm_value": NaN,
+      "llm_explanation": "动作全程伴有明显疼痛回避行为，包括面部紧绷、缓慢控制及保护性姿势，提示重度疼痛影响",
+      "abs_signal": 0.02999001340912802
+    },
+    {
+      "feature": "video_roll_right__SupportHandUsage__score",
+      "feature_type": "LLM_score",
+      "display": "video_roll_right / SupportHandUsage",
+      "raw_value": "双手发力辅助",
+      "numeric_value_after_encoding": 2.0,
+      "model_importance": 0.011972557869820382,
+      "positive_mean": 0.979381443298969,
+      "control_mean": 0.9090909090909091,
+      "risk_signal": 0.011972557869820382,
+      "llm_score": 0.79,
+      "llm_value": "双手发力辅助",
+      "llm_explanation": "双手持续抓握床栏并用力推压以协助完成翻身，尤其在躯干抬升阶段发力明显，显示显著的上肢代偿行为",
+      "abs_signal": 0.011972557869820382
+    },
+    {
+      "feature": "video_roll_left__SupportHandUsage__score",
+      "feature_type": "LLM_score",
+      "display": "video_roll_left / SupportHandUsage",
+      "raw_value": "双手发力辅助",
+      "numeric_value_after_encoding": 2.0,
+      "model_importance": 0.009944581545522987,
+      "positive_mean": 1.04,
+      "control_mean": 1.0,
+      "risk_signal": 0.009944581545522987,
+      "llm_score": 0.79,
+      "llm_value": "双手发力辅助",
+      "llm_explanation": "双手持续抓握床栏并用力推压，协助完成翻身，尤其在仰卧至侧卧阶段依赖上肢支撑，代偿明显",
+      "abs_signal": 0.009944581545522987
+    },
+    {
+      "feature": "video_sit_to_supine__MotionCoordination__score",
+      "feature_type": "LLM_score",
+      "display": "video_sit_to_supine / MotionCoordination",
+      "raw_value": 0.67,
+      "numeric_value_after_encoding": 0.67,
+      "model_importance": 0.014477470756807073,
+      "positive_mean": 0.6855555555555556,
+      "control_mean": 0.6924242424242425,
+      "risk_signal": 0.005790988302722828,
+      "llm_score": 0.67,
+      "llm_value": NaN,
+      "llm_explanation": "动作明显分阶段完成，存在多次停顿和节奏中断，尤其在躯干后移过程中出现明显犹豫",
+      "abs_signal": 0.005790988302722828
+    },
+    {
+      "feature": "video_sit_to_supine__TrunkControl__score",
+      "feature_type": "LLM_score",
+      "display": "video_sit_to_supine / TrunkControl",
+      "raw_value": 0.82,
+      "numeric_value_after_encoding": 0.82,
+      "model_importance": 0.015712077380703172,
+      "positive_mean": 0.8016666666666669,
+      "control_mean": 0.7964646464646464,
+      "risk_signal": 0.0031424154761406204,
+      "llm_score": 0.82,
+      "llm_value": NaN,
+      "llm_explanation": "躯干下落过程中出现明显突然趋势，控制严重不足，依赖上肢支撑缓冲，末段几乎失控",
+      "abs_signal": 0.0031424154761406204
+    },
+    {
+      "feature": "video_roll_left__PainDuringMovement__score",
+      "feature_type": "LLM_score",
+      "display": "video_roll_left / PainDuringMovement",
+      "raw_value": 0.58,
+      "numeric_value_after_encoding": 0.58,
+      "model_importance": 0.022561542534102256,
+      "positive_mean": 0.5819999999999999,
+      "control_mean": 0.4938775510204081,
+      "risk_signal": 0.0013536925520461316,
+      "llm_score": 0.58,
+      "llm_value": NaN,
+      "llm_explanation": "翻身过程中出现中度迟疑，头部抬起后有短暂停滞，面部表情略显紧张，提示存在疼痛干扰",
+      "abs_signal": 0.0013536925520461316
+    },
+    {
+      "feature": "sex",
+      "feature_type": "clinical",
+      "display": "sex",
+      "raw_value": "F",
+      "numeric_value_after_encoding": 0.0,
+      "model_importance": 0.007892741826987414,
+      "positive_mean": 0.19607843137254902,
+      "control_mean": 0.38235294117647056,
+      "risk_signal": -0.0,
+      "llm_score": NaN,
+      "llm_value": "F",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.0
+    },
+    {
+      "feature": "smoking_history",
+      "feature_type": "clinical",
+      "display": "smoking_history",
+      "raw_value": "无",
+      "numeric_value_after_encoding": 0.0,
+      "model_importance": 0.009619404817803044,
+      "positive_mean": 0.10679611650485436,
+      "control_mean": 0.24271844660194175,
+      "risk_signal": -0.0,
+      "llm_score": NaN,
+      "llm_value": "无",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.0
+    },
+    {
+      "feature": "drinking_history",
+      "feature_type": "clinical",
+      "display": "drinking_history",
+      "raw_value": "无",
+      "numeric_value_after_encoding": 0.0,
+      "model_importance": 0.004155516894618274,
+      "positive_mean": 0.13592233009708737,
+      "control_mean": 0.23300970873786409,
+      "risk_signal": -0.0,
+      "llm_score": NaN,
+      "llm_value": "无",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.0
+    },
+    {
+      "feature": "injury_history",
+      "feature_type": "clinical",
+      "display": "injury_history",
+      "raw_value": "无",
+      "numeric_value_after_encoding": 0.0,
+      "model_importance": 0.11081317805524153,
+      "positive_mean": 0.6504854368932039,
+      "control_mean": 0.20388349514563106,
+      "risk_signal": 0.0,
+      "llm_score": NaN,
+      "llm_value": "无",
+      "llm_explanation": "Clinical metadata feature; no LLM explanation.",
+      "abs_signal": 0.0
+    }
+  ],
+  "llm_explanations": [
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "lateral",
+      "prefix": "image_lateral",
+      "indicator": "ThoracicKyphosis",
+      "score_column": "image_lateral__ThoracicKyphosis__score",
+      "value_for_model": 0.85,
+      "score": 0.85,
+      "value": NaN,
+      "explanation": "胸椎后凸显著增大，呈现明显驼背畸形，T1-T12连线弧度超过正常范围约35°，接近结构性异常",
+      "json": "{\"score\": 0.85, \"explanation\": \"胸椎后凸显著增大，呈现明显驼背畸形，T1-T12连线弧度超过正常范围约35°，接近结构性异常\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "lateral",
+      "prefix": "image_lateral",
+      "indicator": "LumbarLordosis",
+      "score_column": "image_lateral__LumbarLordosis__score",
+      "value_for_model": 0.76,
+      "score": 0.76,
+      "value": NaN,
+      "explanation": "腰椎前凸明显减小，几乎呈平直状态，存在轻度反弓趋势，提示代偿性改变",
+      "json": "{\"score\": 0.76, \"explanation\": \"腰椎前凸明显减小，几乎呈平直状态，存在轻度反弓趋势，提示代偿性改变\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "lateral",
+      "prefix": "image_lateral",
+      "indicator": "TrunkInclination",
+      "score_column": "image_lateral__TrunkInclination__score",
+      "value_for_model": 0.72,
+      "score": 0.72,
+      "value": NaN,
+      "explanation": "躯干明显前倾，C7至骨盆中心连线与垂直线夹角约17°，重心前移显著",
+      "json": "{\"score\": 0.72, \"explanation\": \"躯干明显前倾，C7至骨盆中心连线与垂直线夹角约17°，重心前移显著\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "lateral",
+      "prefix": "image_lateral",
+      "indicator": "HeadPosition",
+      "score_column": "image_lateral__HeadPosition__score",
+      "value_for_model": 0.67,
+      "score": 0.67,
+      "value": NaN,
+      "explanation": "耳垂位于肩峰前方约2.8cm，头部前伸明显，颈椎曲度代偿性变直",
+      "json": "{\"score\": 0.67, \"explanation\": \"耳垂位于肩峰前方约2.8cm，头部前伸明显，颈椎曲度代偿性变直\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "lateral",
+      "prefix": "image_lateral",
+      "indicator": "SagittalBalance",
+      "score_column": "image_lateral__SagittalBalance__score",
+      "value_for_model": 0.81,
+      "score": 0.81,
+      "value": NaN,
+      "explanation": "C7铅垂线前移约7.2cm，超出S1后上缘较远，矢状位严重失衡",
+      "json": "{\"score\": 0.81, \"explanation\": \"C7铅垂线前移约7.2cm，超出S1后上缘较远，矢状位严重失衡\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "frontal",
+      "prefix": "image_frontal",
+      "indicator": "SpinalAlignment",
+      "score_column": "image_frontal__SpinalAlignment__score",
+      "value_for_model": 0.53,
+      "score": 0.53,
+      "value": NaN,
+      "explanation": "C7-S1连线向右侧偏移约2.4cm，躯干轴线明显偏离中线",
+      "json": "{\"score\": 0.53, \"explanation\": \"C7-S1连线向右侧偏移约2.4cm，躯干轴线明显偏离中线\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "frontal",
+      "prefix": "image_frontal",
+      "indicator": "ShoulderSymmetry",
+      "score_column": "image_frontal__ShoulderSymmetry__score",
+      "value_for_model": 0.68,
+      "score": 0.68,
+      "value": NaN,
+      "explanation": "右肩较左侧高约2.3cm，伴胸廓旋转及代偿性抬肩",
+      "json": "{\"score\": 0.68, \"explanation\": \"右肩较左侧高约2.3cm，伴胸廓旋转及代偿性抬肩\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "frontal",
+      "prefix": "image_frontal",
+      "indicator": "PelvicLeveling",
+      "score_column": "image_frontal__PelvicLeveling__score",
+      "value_for_model": 0.59,
+      "score": 0.59,
+      "value": NaN,
+      "explanation": "左侧髂嵴低约1.9cm，存在明显骨盆侧倾，影响负重平衡",
+      "json": "{\"score\": 0.59, \"explanation\": \"左侧髂嵴低约1.9cm，存在明显骨盆侧倾，影响负重平衡\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "frontal",
+      "prefix": "image_frontal",
+      "indicator": "CoronalCurvature",
+      "score_column": "image_frontal__CoronalCurvature__score",
+      "value_for_model": 0.65,
+      "score": 0.65,
+      "value": NaN,
+      "explanation": "脊柱关键点呈现显著S形弯曲，最大横向偏移约3.2cm，提示结构性侧弯趋势",
+      "json": "{\"score\": 0.65, \"explanation\": \"脊柱关键点呈现显著S形弯曲，最大横向偏移约3.2cm，提示结构性侧弯趋势\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "frontal",
+      "prefix": "image_frontal",
+      "indicator": "GlobalBalance",
+      "score_column": "image_frontal__GlobalBalance__score",
+      "value_for_model": 0.67,
+      "score": 0.67,
+      "value": NaN,
+      "explanation": "头部中心与骨盆中心偏离垂直轴约3.1cm，重心明显偏向右侧，需姿势代偿维持站立",
+      "json": "{\"score\": 0.67, \"explanation\": \"头部中心与骨盆中心偏离垂直轴约3.1cm，重心明显偏向右侧，需姿势代偿维持站立\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "back",
+      "prefix": "image_back",
+      "indicator": "SpinalVerticality",
+      "score_column": "image_back__SpinalVerticality__score",
+      "value_for_model": 0.32,
+      "score": 0.32,
+      "value": NaN,
+      "explanation": "C7-S1连线向右侧偏移约1.4cm，躯干整体冠状位轻度偏离中轴，无明显代偿动作",
+      "json": "{\"score\": 0.32, \"explanation\": \"C7-S1连线向右侧偏移约1.4cm，躯干整体冠状位轻度偏离中轴，无明显代偿动作\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "back",
+      "prefix": "image_back",
+      "indicator": "ScapularSymmetry",
+      "score_column": "image_back__ScapularSymmetry__score",
+      "value_for_model": 0.58,
+      "score": 0.58,
+      "value": NaN,
+      "explanation": "右侧肩胛骨下角较左侧高约1.3cm，伴胸廓轻微旋转，姿势稳定存在",
+      "json": "{\"score\": 0.58, \"explanation\": \"右侧肩胛骨下角较左侧高约1.3cm，伴胸廓轻微旋转，姿势稳定存在\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "back",
+      "prefix": "image_back",
+      "indicator": "PelvicRotation",
+      "score_column": "image_back__PelvicRotation__score",
+      "value_for_model": 0.43,
+      "score": 0.43,
+      "value": NaN,
+      "explanation": "右侧ASIS略前移约1.1cm，骨盆存在轻中度旋转，腰椎可见代偿性侧弯趋势",
+      "json": "{\"score\": 0.43, \"explanation\": \"右侧ASIS略前移约1.1cm，骨盆存在轻中度旋转，腰椎可见代偿性侧弯趋势\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "back",
+      "prefix": "image_back",
+      "indicator": "ParaspinalTensionAsymmetry",
+      "score_column": "image_back__ParaspinalTensionAsymmetry__score",
+      "value_for_model": 0.61,
+      "score": 0.61,
+      "value": NaN,
+      "explanation": "左侧竖脊肌肌腹明显隆起，张力增高，轮廓不对称，提示持续性单侧肌肉代偿",
+      "json": "{\"score\": 0.61, \"explanation\": \"左侧竖脊肌肌腹明显隆起，张力增高，轮廓不对称，提示持续性单侧肌肉代偿\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "roll_right",
+      "prefix": "video_roll_right",
+      "indicator": "RollingSmoothness",
+      "score_column": "video_roll_right__RollingSmoothness__score",
+      "value_for_model": 0.58,
+      "score": 0.58,
+      "value": NaN,
+      "explanation": "翻身过程中存在明显减速和分段动作，启动后出现短暂停顿，随后以较慢速度继续完成翻转，整体动作不连贯",
+      "json": "{\"score\": 0.58, \"explanation\": \"翻身过程中存在明显减速和分段动作，启动后出现短暂停顿，随后以较慢速度继续完成翻转，整体动作不连贯\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "roll_right",
+      "prefix": "video_roll_right",
+      "indicator": "HipShoulderCoordination",
+      "score_column": "video_roll_right__HipShoulderCoordination__score",
+      "value_for_model": 0.63,
+      "score": 0.63,
+      "value": NaN,
+      "explanation": "肩部先于髋部开始运动，相位差较大，躯干呈现明显的分离旋转模式，缺乏协调性，提示代偿机制参与",
+      "json": "{\"score\": 0.63, \"explanation\": \"肩部先于髋部开始运动，相位差较大，躯干呈现明显的分离旋转模式，缺乏协调性，提示代偿机制参与\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "roll_right",
+      "prefix": "video_roll_right",
+      "indicator": "PainDuringMovement",
+      "score_column": "video_roll_right__PainDuringMovement__score",
+      "value_for_model": 0.55,
+      "score": 0.55,
+      "value": NaN,
+      "explanation": "翻身过程中出现明显犹豫和节奏改变，动作减幅且中途暂停，面部表情未见明显痛苦但肢体表现提示中度疼痛干扰",
+      "json": "{\"score\": 0.55, \"explanation\": \"翻身过程中出现明显犹豫和节奏改变，动作减幅且中途暂停，面部表情未见明显痛苦但肢体表现提示中度疼痛干扰\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "roll_right",
+      "prefix": "video_roll_right",
+      "indicator": "SupportHandUsage",
+      "score_column": "video_roll_right__SupportHandUsage__score",
+      "value_for_model": "双手发力辅助",
+      "score": 0.79,
+      "value": "双手发力辅助",
+      "explanation": "双手持续抓握床栏并用力推压以协助完成翻身，尤其在躯干抬升阶段发力明显，显示显著的上肢代偿行为",
+      "json": "{\"score\": 0.79, \"value\": \"双手发力辅助\", \"explanation\": \"双手持续抓握床栏并用力推压以协助完成翻身，尤其在躯干抬升阶段发力明显，显示显著的上肢代偿行为\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "sit_to_supine",
+      "prefix": "video_sit_to_supine",
+      "indicator": "MotionCoordination",
+      "score_column": "video_sit_to_supine__MotionCoordination__score",
+      "value_for_model": 0.67,
+      "score": 0.67,
+      "value": NaN,
+      "explanation": "动作明显分阶段完成，存在多次停顿和节奏中断，尤其在躯干后移过程中出现明显犹豫",
+      "json": "{\"score\": 0.67, \"explanation\": \"动作明显分阶段完成，存在多次停顿和节奏中断，尤其在躯干后移过程中出现明显犹豫\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "sit_to_supine",
+      "prefix": "video_sit_to_supine",
+      "indicator": "TrunkControl",
+      "score_column": "video_sit_to_supine__TrunkControl__score",
+      "value_for_model": 0.82,
+      "score": 0.82,
+      "value": NaN,
+      "explanation": "躯干下落过程中出现明显突然趋势，控制严重不足，依赖上肢支撑缓冲，末段几乎失控",
+      "json": "{\"score\": 0.82, \"explanation\": \"躯干下落过程中出现明显突然趋势，控制严重不足，依赖上肢支撑缓冲，末段几乎失控\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "sit_to_supine",
+      "prefix": "video_sit_to_supine",
+      "indicator": "ArmAssistance",
+      "score_column": "video_sit_to_supine__ArmAssistance__score",
+      "value_for_model": "明显依赖支撑",
+      "score": 0.91,
+      "value": "明显依赖支撑",
+      "explanation": "双手持续发力支撑床面以减速，尤其在躯干后移后期完全依赖双臂控制下落，表现为重度辅助",
+      "json": "{\"score\": 0.91, \"value\": \"明显依赖支撑\", \"explanation\": \"双手持续发力支撑床面以减速，尤其在躯干后移后期完全依赖双臂控制下落，表现为重度辅助\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "sit_to_supine",
+      "prefix": "video_sit_to_supine",
+      "indicator": "ExecutionTime",
+      "score_column": "video_sit_to_supine__ExecutionTime__score",
+      "value_for_model": 0.75,
+      "score": 0.75,
+      "value": NaN,
+      "explanation": "整体耗时显著延长（约3.8秒），存在明显迟疑与反复调整，反映动作效率低下",
+      "json": "{\"score\": 0.75, \"explanation\": \"整体耗时显著延长（约3.8秒），存在明显迟疑与反复调整，反映动作效率低下\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "sit_to_supine",
+      "prefix": "video_sit_to_supine",
+      "indicator": "PainResponseLevel",
+      "score_column": "video_sit_to_supine__PainResponseLevel__score",
+      "value_for_model": 0.78,
+      "score": 0.78,
+      "value": NaN,
+      "explanation": "动作全程伴有明显疼痛回避行为，包括面部紧绷、缓慢控制及保护性姿势，提示重度疼痛影响",
+      "json": "{\"score\": 0.78, \"explanation\": \"动作全程伴有明显疼痛回避行为，包括面部紧绷、缓慢控制及保护性姿势，提示重度疼痛影响\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "roll_left",
+      "prefix": "video_roll_left",
+      "indicator": "RollingSmoothness",
+      "score_column": "video_roll_left__RollingSmoothness__score",
+      "value_for_model": 0.45,
+      "score": 0.45,
+      "value": NaN,
+      "explanation": "翻身过程中存在明显减速和分段现象，从侧卧到仰卧阶段出现短暂停顿，随后继续完成动作，整体流畅性受损",
+      "json": "{\"score\": 0.45, \"explanation\": \"翻身过程中存在明显减速和分段现象，从侧卧到仰卧阶段出现短暂停顿，随后继续完成动作，整体流畅性受损\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "roll_left",
+      "prefix": "video_roll_left",
+      "indicator": "HipShoulderCoordination",
+      "score_column": "video_roll_left__HipShoulderCoordination__score",
+      "value_for_model": 0.63,
+      "score": 0.63,
+      "value": NaN,
+      "explanation": "肩部与髋部旋转存在明显相位差，肩部先启动并主导翻转，髋部滞后，躯干呈现非同步块状移动，协调性较差",
+      "json": "{\"score\": 0.63, \"explanation\": \"肩部与髋部旋转存在明显相位差，肩部先启动并主导翻转，髋部滞后，躯干呈现非同步块状移动，协调性较差\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "roll_left",
+      "prefix": "video_roll_left",
+      "indicator": "PainDuringMovement",
+      "score_column": "video_roll_left__PainDuringMovement__score",
+      "value_for_model": 0.58,
+      "score": 0.58,
+      "value": NaN,
+      "explanation": "翻身过程中出现中度迟疑，头部抬起后有短暂停滞，面部表情略显紧张，提示存在疼痛干扰",
+      "json": "{\"score\": 0.58, \"explanation\": \"翻身过程中出现中度迟疑，头部抬起后有短暂停滞，面部表情略显紧张，提示存在疼痛干扰\"}"
+    },
+    {
+      "patient": "OVCF-DEMO-001",
+      "action": "roll_left",
+      "prefix": "video_roll_left",
+      "indicator": "SupportHandUsage",
+      "score_column": "video_roll_left__SupportHandUsage__score",
+      "value_for_model": "双手发力辅助",
+      "score": 0.79,
+      "value": "双手发力辅助",
+      "explanation": "双手持续抓握床栏并用力推压，协助完成翻身，尤其在仰卧至侧卧阶段依赖上肢支撑，代偿明显",
+      "json": "{\"score\": 0.79, \"value\": \"双手发力辅助\", \"explanation\": \"双手持续抓握床栏并用力推压，协助完成翻身，尤其在仰卧至侧卧阶段依赖上肢支撑，代偿明显\"}"
+    }
+  ],
+  "structured": {
+    "lateral": {
+      "ThoracicKyphosis": {
+        "score": 0.85,
+        "explanation": "胸椎后凸显著增大，呈现明显驼背畸形，T1-T12连线弧度超过正常范围约35°，接近结构性异常"
+      },
+      "LumbarLordosis": {
+        "score": 0.76,
+        "explanation": "腰椎前凸明显减小，几乎呈平直状态，存在轻度反弓趋势，提示代偿性改变"
+      },
+      "TrunkInclination": {
+        "score": 0.72,
+        "explanation": "躯干明显前倾，C7至骨盆中心连线与垂直线夹角约17°，重心前移显著"
+      },
+      "HeadPosition": {
+        "score": 0.67,
+        "explanation": "耳垂位于肩峰前方约2.8cm，头部前伸明显，颈椎曲度代偿性变直"
+      },
+      "SagittalBalance": {
+        "score": 0.81,
+        "explanation": "C7铅垂线前移约7.2cm，超出S1后上缘较远，矢状位严重失衡"
+      }
+    },
+    "frontal": {
+      "SpinalAlignment": {
+        "score": 0.53,
+        "explanation": "C7-S1连线向右侧偏移约2.4cm，躯干轴线明显偏离中线"
+      },
+      "ShoulderSymmetry": {
+        "score": 0.68,
+        "explanation": "右肩较左侧高约2.3cm，伴胸廓旋转及代偿性抬肩"
+      },
+      "PelvicLeveling": {
+        "score": 0.59,
+        "explanation": "左侧髂嵴低约1.9cm，存在明显骨盆侧倾，影响负重平衡"
+      },
+      "CoronalCurvature": {
+        "score": 0.65,
+        "explanation": "脊柱关键点呈现显著S形弯曲，最大横向偏移约3.2cm，提示结构性侧弯趋势"
+      },
+      "GlobalBalance": {
+        "score": 0.67,
+        "explanation": "头部中心与骨盆中心偏离垂直轴约3.1cm，重心明显偏向右侧，需姿势代偿维持站立"
+      }
+    },
+    "back": {
+      "SpinalVerticality": {
+        "score": 0.32,
+        "explanation": "C7-S1连线向右侧偏移约1.4cm，躯干整体冠状位轻度偏离中轴，无明显代偿动作"
+      },
+      "ScapularSymmetry": {
+        "score": 0.58,
+        "explanation": "右侧肩胛骨下角较左侧高约1.3cm，伴胸廓轻微旋转，姿势稳定存在"
+      },
+      "PelvicRotation": {
+        "score": 0.43,
+        "explanation": "右侧ASIS略前移约1.1cm，骨盆存在轻中度旋转，腰椎可见代偿性侧弯趋势"
+      },
+      "ParaspinalTensionAsymmetry": {
+        "score": 0.61,
+        "explanation": "左侧竖脊肌肌腹明显隆起，张力增高，轮廓不对称，提示持续性单侧肌肉代偿"
+      }
+    },
+    "supine_to_sit": {
+      "error": "400 Client Error: Bad Request for url: https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation"
+    },
+    "roll_right": {
+      "RollingSmoothness": {
+        "score": 0.58,
+        "explanation": "翻身过程中存在明显减速和分段动作，启动后出现短暂停顿，随后以较慢速度继续完成翻转，整体动作不连贯"
+      },
+      "HipShoulderCoordination": {
+        "score": 0.63,
+        "explanation": "肩部先于髋部开始运动，相位差较大，躯干呈现明显的分离旋转模式，缺乏协调性，提示代偿机制参与"
+      },
+      "PainDuringMovement": {
+        "score": 0.55,
+        "explanation": "翻身过程中出现明显犹豫和节奏改变，动作减幅且中途暂停，面部表情未见明显痛苦但肢体表现提示中度疼痛干扰"
+      },
+      "SupportHandUsage": {
+        "score": 0.79,
+        "value": "双手发力辅助",
+        "explanation": "双手持续抓握床栏并用力推压以协助完成翻身，尤其在躯干抬升阶段发力明显，显示显著的上肢代偿行为"
+      }
+    },
+    "sit_to_supine": {
+      "MotionCoordination": {
+        "score": 0.67,
+        "explanation": "动作明显分阶段完成，存在多次停顿和节奏中断，尤其在躯干后移过程中出现明显犹豫"
+      },
+      "TrunkControl": {
+        "score": 0.82,
+        "explanation": "躯干下落过程中出现明显突然趋势，控制严重不足，依赖上肢支撑缓冲，末段几乎失控"
+      },
+      "ArmAssistance": {
+        "score": 0.91,
+        "value": "明显依赖支撑",
+        "explanation": "双手持续发力支撑床面以减速，尤其在躯干后移后期完全依赖双臂控制下落，表现为重度辅助"
+      },
+      "ExecutionTime": {
+        "score": 0.75,
+        "explanation": "整体耗时显著延长（约3.8秒），存在明显迟疑与反复调整，反映动作效率低下"
+      },
+      "PainResponseLevel": {
+        "score": 0.78,
+        "explanation": "动作全程伴有明显疼痛回避行为，包括面部紧绷、缓慢控制及保护性姿势，提示重度疼痛影响"
+      }
+    },
+    "roll_left": {
+      "RollingSmoothness": {
+        "score": 0.45,
+        "explanation": "翻身过程中存在明显减速和分段现象，从侧卧到仰卧阶段出现短暂停顿，随后继续完成动作，整体流畅性受损"
+      },
+      "HipShoulderCoordination": {
+        "score": 0.63,
+        "explanation": "肩部与髋部旋转存在明显相位差，肩部先启动并主导翻转，髋部滞后，躯干呈现非同步块状移动，协调性较差"
+      },
+      "PainDuringMovement": {
+        "score": 0.58,
+        "explanation": "翻身过程中出现中度迟疑，头部抬起后有短暂停滞，面部表情略显紧张，提示存在疼痛干扰"
+      },
+      "SupportHandUsage": {
+        "score": 0.79,
+        "value": "双手发力辅助",
+        "explanation": "双手持续抓握床栏并用力推压，协助完成翻身，尤其在仰卧至侧卧阶段依赖上肢支撑，代偿明显"
+      }
+    }
+  },
+  "media": [
+    {
+      "role": "lateral",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\01_刁明英_侧位.jpg",
+      "name": "01_刁明英_侧位.jpg"
+    },
+    {
+      "role": "frontal",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\02_刁明英_正位.jpg",
+      "name": "02_刁明英_正位.jpg"
+    },
+    {
+      "role": "back",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\03_刁明英_背位.jpg",
+      "name": "03_刁明英_背位.jpg"
+    },
+    {
+      "role": "supine_to_sit",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\04_刁明英_卧到坐.mp4",
+      "name": "04_刁明英_卧到坐.mp4"
+    },
+    {
+      "role": "roll_right",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\05_刁明英_右翻.mp4",
+      "name": "05_刁明英_右翻.mp4"
+    },
+    {
+      "role": "sit_to_supine",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\06_刁明英_坐到卧.mp4",
+      "name": "06_刁明英_坐到卧.mp4"
+    },
+    {
+      "role": "roll_left",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\07_刁明英_左翻.mp4",
+      "name": "07_刁明英_左翻.mp4"
+    }
+  ],
+  "logs": [
+    {
+      "time": "2026-05-18 20:32:30",
+      "event": "runtime_payload_loaded",
+      "case_id": "OVCF-DEMO-001",
+      "media_roles": [
+        "lateral",
+        "frontal",
+        "back",
+        "supine_to_sit",
+        "roll_right",
+        "sit_to_supine",
+        "roll_left"
+      ],
+      "media_paths": {
+        "lateral": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\01_刁明英_侧位.jpg",
+        "frontal": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\02_刁明英_正位.jpg",
+        "back": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\03_刁明英_背位.jpg",
+        "supine_to_sit": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\04_刁明英_卧到坐.mp4",
+        "roll_right": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\05_刁明英_右翻.mp4",
+        "sit_to_supine": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\06_刁明英_坐到卧.mp4",
+        "roll_left": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\07_刁明英_左翻.mp4"
+      }
+    },
+    {
+      "time": "2026-05-18 20:32:30",
+      "event": "api_key_ready",
+      "source": "environment_or_embedded",
+      "key_present": true
+    },
+    {
+      "time": "2026-05-18 20:32:30",
+      "event": "prompts_loaded",
+      "prompt_count": 6,
+      "prompt_keys": [
+        "image_back.txt",
+        "image_frontal.txt",
+        "image_lateral.txt",
+        "video_roll.txt",
+        "video_sit_to_supine.txt",
+        "video_supine_to_sit.txt"
+      ]
+    },
+    {
+      "time": "2026-05-18 20:32:30",
+      "event": "dashscope_action_start",
+      "action": "lateral",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\01_刁明英_侧位.jpg",
+      "exists": true,
+      "size": 3892454
+    },
+    {
+      "time": "2026-05-18 20:32:44",
+      "event": "dashscope_action_success",
+      "action": "lateral",
+      "attempt": 1,
+      "result_keys": [
+        "ThoracicKyphosis",
+        "LumbarLordosis",
+        "TrunkInclination",
+        "HeadPosition",
+        "SagittalBalance"
+      ],
+      "indicator_count": 5,
+      "indicators": [
+        "ThoracicKyphosis",
+        "LumbarLordosis",
+        "TrunkInclination",
+        "HeadPosition",
+        "SagittalBalance"
+      ]
+    },
+    {
+      "time": "2026-05-18 20:32:44",
+      "event": "dashscope_action_start",
+      "action": "frontal",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\02_刁明英_正位.jpg",
+      "exists": true,
+      "size": 3782654
+    },
+    {
+      "time": "2026-05-18 20:32:57",
+      "event": "dashscope_action_success",
+      "action": "frontal",
+      "attempt": 1,
+      "result_keys": [
+        "SpinalAlignment",
+        "ShoulderSymmetry",
+        "PelvicLeveling",
+        "CoronalCurvature",
+        "GlobalBalance"
+      ],
+      "indicator_count": 5,
+      "indicators": [
+        "SpinalAlignment",
+        "ShoulderSymmetry",
+        "PelvicLeveling",
+        "CoronalCurvature",
+        "GlobalBalance"
+      ]
+    },
+    {
+      "time": "2026-05-18 20:32:57",
+      "event": "dashscope_action_start",
+      "action": "back",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\03_刁明英_背位.jpg",
+      "exists": true,
+      "size": 3429248
+    },
+    {
+      "time": "2026-05-18 20:33:13",
+      "event": "dashscope_action_success",
+      "action": "back",
+      "attempt": 1,
+      "result_keys": [
+        "SpinalVerticality",
+        "ScapularSymmetry",
+        "PelvicRotation",
+        "ParaspinalTensionAsymmetry"
+      ],
+      "indicator_count": 4,
+      "indicators": [
+        "SpinalVerticality",
+        "ScapularSymmetry",
+        "PelvicRotation",
+        "ParaspinalTensionAsymmetry"
+      ]
+    },
+    {
+      "time": "2026-05-18 20:33:13",
+      "event": "dashscope_action_start",
+      "action": "supine_to_sit",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\04_刁明英_卧到坐.mp4",
+      "exists": true,
+      "size": 3698455
+    },
+    {
+      "time": "2026-05-18 20:33:23",
+      "event": "dashscope_action_error",
+      "action": "supine_to_sit",
+      "attempt": 1,
+      "error": "400 Client Error: Bad Request for url: https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation"
+    },
+    {
+      "time": "2026-05-18 20:33:33",
+      "event": "dashscope_action_error",
+      "action": "supine_to_sit",
+      "attempt": 2,
+      "error": "400 Client Error: Bad Request for url: https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation"
+    },
+    {
+      "time": "2026-05-18 20:33:43",
+      "event": "dashscope_action_error",
+      "action": "supine_to_sit",
+      "attempt": 3,
+      "error": "400 Client Error: Bad Request for url: https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation"
+    },
+    {
+      "time": "2026-05-18 20:33:45",
+      "event": "dashscope_action_failed",
+      "action": "supine_to_sit",
+      "error": "400 Client Error: Bad Request for url: https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation"
+    },
+    {
+      "time": "2026-05-18 20:33:45",
+      "event": "dashscope_action_start",
+      "action": "roll_right",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\05_刁明英_右翻.mp4",
+      "exists": true,
+      "size": 1415407
+    },
+    {
+      "time": "2026-05-18 20:33:57",
+      "event": "dashscope_action_success",
+      "action": "roll_right",
+      "attempt": 1,
+      "result_keys": [
+        "RollingSmoothness",
+        "HipShoulderCoordination",
+        "PainDuringMovement",
+        "SupportHandUsage"
+      ],
+      "indicator_count": 4,
+      "indicators": [
+        "RollingSmoothness",
+        "HipShoulderCoordination",
+        "PainDuringMovement",
+        "SupportHandUsage"
+      ]
+    },
+    {
+      "time": "2026-05-18 20:33:57",
+      "event": "dashscope_action_start",
+      "action": "sit_to_supine",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\06_刁明英_坐到卧.mp4",
+      "exists": true,
+      "size": 3791622
+    },
+    {
+      "time": "2026-05-18 20:34:26",
+      "event": "dashscope_action_success",
+      "action": "sit_to_supine",
+      "attempt": 1,
+      "result_keys": [
+        "MotionCoordination",
+        "TrunkControl",
+        "ArmAssistance",
+        "ExecutionTime",
+        "PainResponseLevel"
+      ],
+      "indicator_count": 5,
+      "indicators": [
+        "MotionCoordination",
+        "TrunkControl",
+        "ArmAssistance",
+        "ExecutionTime",
+        "PainResponseLevel"
+      ]
+    },
+    {
+      "time": "2026-05-18 20:34:26",
+      "event": "dashscope_action_start",
+      "action": "roll_left",
+      "path": "D:\\vscode_projects\\ovcf\\code_final\\web_demo\\runtime_cases\\session-20260518-202301-bc9ee5\\OVCF-DEMO-001\\uploads\\07_刁明英_左翻.mp4",
+      "exists": true,
+      "size": 1832542
+    },
+    {
+      "time": "2026-05-18 20:34:39",
+      "event": "dashscope_action_success",
+      "action": "roll_left",
+      "attempt": 1,
+      "result_keys": [
+        "RollingSmoothness",
+        "HipShoulderCoordination",
+        "PainDuringMovement",
+        "SupportHandUsage"
+      ],
+      "indicator_count": 4,
+      "indicators": [
+        "RollingSmoothness",
+        "HipShoulderCoordination",
+        "PainDuringMovement",
+        "SupportHandUsage"
+      ]
+    },
+    {
+      "time": "2026-05-18 20:34:39",
+      "event": "structured_flattened",
+      "present_score_count": 27,
+      "present_score_cols": [
+        "image_back__ParaspinalTensionAsymmetry__score",
+        "image_back__PelvicRotation__score",
+        "image_back__ScapularSymmetry__score",
+        "image_back__SpinalVerticality__score",
+        "image_frontal__CoronalCurvature__score",
+        "image_frontal__GlobalBalance__score",
+        "image_frontal__PelvicLeveling__score",
+        "image_frontal__ShoulderSymmetry__score",
+        "image_frontal__SpinalAlignment__score",
+        "image_lateral__HeadPosition__score",
+        "image_lateral__LumbarLordosis__score",
+        "image_lateral__SagittalBalance__score",
+        "image_lateral__ThoracicKyphosis__score",
+        "image_lateral__TrunkInclination__score",
+        "video_roll_left__HipShoulderCoordination__score",
+        "video_roll_left__PainDuringMovement__score",
+        "video_roll_left__RollingSmoothness__score",
+        "video_roll_left__SupportHandUsage__score",
+        "video_roll_right__HipShoulderCoordination__score",
+        "video_roll_right__PainDuringMovement__score",
+        "video_roll_right__RollingSmoothness__score",
+        "video_roll_right__SupportHandUsage__score",
+        "video_sit_to_supine__ArmAssistance__score",
+        "video_sit_to_supine__ExecutionTime__score",
+        "video_sit_to_supine__MotionCoordination__score",
+        "video_sit_to_supine__PainResponseLevel__score",
+        "video_sit_to_supine__TrunkControl__score"
+      ],
+      "explanation_rows": 27
+    },
+    {
+      "time": "2026-05-18 20:34:41",
+      "event": "model_bundle_loaded",
+      "feature_count": 39,
+      "threshold": 0.4514063610952404
+    },
+    {
+      "time": "2026-05-18 20:34:41",
+      "event": "missing_modalities_computed",
+      "missing_modalities": [
+        "supine_to_sit"
+      ]
+    },
+    {
+      "time": "2026-05-18 20:34:41",
+      "event": "prediction_done",
+      "probability": 0.28044708994708994,
+      "threshold": 0.4514063610952404,
+      "prediction": "control/non-OVCF",
+      "top_feature_count": 10
+    }
+  ]
+}

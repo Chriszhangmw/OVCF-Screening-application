@@ -1,0 +1,2 @@
+{"time": "2026-05-18 20:23:24", "event": "request_received", "case_id": "OVCF-HTTP-CHECK", "demo_mode": true, "file_count": 0}
+{"time": "2026-05-18 20:23:24", "event": "upload_summary", "uploaded_media": [], "completeness": {"uploaded_roles": [], "expected_roles": ["frontal", "back", "lateral", "roll_left", "roll_right", "supine_to_sit", "sit_to_supine"], "uploaded_count": 0, "expected_count": 7, "ratio": 0.0}}

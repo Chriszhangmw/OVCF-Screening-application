@@ -1,0 +1,19 @@
+{
+  "RollingSmoothness": {
+    "score": 0.53,
+    "explanation": "翻身过程中存在明显减速和分段动作，启动后出现短暂停顿，随后通过上肢支撑继续完成动作，整体流畅性受损"
+  },
+  "HipShoulderCoordination": {
+    "score": 0.68,
+    "explanation": "肩部先于髋部启动旋转，相位差较大，躯干呈现块状移动趋势，提示协调性显著下降"
+  },
+  "PainDuringMovement": {
+    "score": 0.59,
+    "explanation": "翻身初期动作缓慢，中途出现犹豫和停顿，伴随保护性收缩姿态，提示中度疼痛干扰"
+  },
+  "SupportHandUsage": {
+    "score": 0.91,
+    "value": "双手发力辅助",
+    "explanation": "双手持续推床栏杆以协助完成翻身，发力明显且贯穿整个动作过程，属于重度代偿行为"
+  }
+}
